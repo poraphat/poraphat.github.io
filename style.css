@@ -1,0 +1,45 @@
+body {
+			background-color:black;
+			font-family:arial;
+			color:black;
+		}
+		.middle {
+					background-color:black;
+					font-family:arial;
+					color:white;
+			width:100%;
+			float:center;
+			border:solid;
+			border-color:#F93;
+			border-radius:10px;
+		}
+		.header {
+			background-image: url("kadebg.png");
+			background-repeat: repeat-x;
+			background-size: 60px 77px;
+			max-width: 100%;
+			background-color: #F93;
+			border: solid black;
+			border-radius: 10px;
+			text-align: center;
+			color:black;
+			-webkit-text-stroke:1px white;
+		}
+		.maincontent {
+			width:100%;
+			padding: 1px 20px 20px 20px;
+		}
+		.linkkade:link, .linkkade:visited {
+			color: #F93;
+			text-decoration: none;
+		}
+		.footer {
+			max-width:100%;
+			text-align: center;
+			padding-top: 10px;
+			font-family: system;
+		}
+		.imageslide {
+			text-align: center;
+			color: #F93;
+		}

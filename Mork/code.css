@@ -124,10 +124,14 @@ ul li::before {
   margin-left: 1%;
   margin-right: 1%;
 }
+
 ::-moz-selection {
        background-color: green;
+       color: white;
 }
 
 ::selection {
        background-color: green;
+       color: white;
 }
+

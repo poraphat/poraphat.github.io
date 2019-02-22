@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css?family=PT+Sans+Narrow|Rubik|Scope+One|Staatliches|ZCOOL+QingKe+HuangYou');
+
+body {
+  background-image: url("pics/bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  color: white;
+}
+.header {
+  position: fixed;
+  top: 1%;
+  left: 1%;
+  font-family: 'ZCOOL QingKe HuangYou', cursive;
+  border: solid green;
+  border-radius: 8px;
+  padding: 4px;
+  color: green;
+  font-size: 3em;
+}
+.copyright {
+  font-family: 'Scope One', serif;
+  position: fixed;
+  right: 1%;
+  bottom: 1%;
+  color: green;
+}
+nav {
+  border: solid green;
+  position: fixed;
+  border-radius: 30px;
+  padding: 0px;
+  right:1%;
+  top: 2%;
+  background-color: #1a1a1a;
+}
+.clicker:link, .clicker:visited {
+  color: green;
+  text-decoration: none;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.5em;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+  border-radius: 30px;
+}
+.clicker:hover, .clicker:active {
+  background-color: green;
+  color: white;
+}
+.clickertop:link, .clickertop:visited {
+  background-color: white;
+  color: green;
+  text-decoration: none;
+  font-family: 'PT Sans Narrow', sans-serif;
+  font-size: 1.5em;
+  padding-left: 15px;
+  padding-right: 15px;
+  display: inline-block;
+  border-radius: 30px;
+}
+.clickertop:hover, .clickertop:active {
+  background-color: green;
+  color: white;
+}
+main {
+  margin-top: 10%;
+  margin-bottom: 5%;
+  padding: 0px 15% 0px 15%;
+}
+.title {
+  text-align: center;
+  font-family: 'Staatliches', cursive;
+  font-size: 2em;
+}
+.minititle {
+  text-align: center;
+  font-family: 'Staatliches', cursive;
+  font-size: 1.8em;
+  text-decoration: underline;
+}
+.text {
+  font-family: 'Rubik', sans-serif;
+  text-align: justify;
+  line-height: 1.5em;
+}
+strong {
+  font-family: 'Staatliches', cursive;
+  letter-spacing: 2px;
+  font-size: 1.1em;
+  font-weight: normal;
+}
+.ref {
+  font-style: italic;
+  color: grey;
+  text-decoration: none;
+}
+.ref:hover {
+  color: green;
+}
+li {
+  list-style: none;
+  font-family: 'Rubik', sans-serif;
+}
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: green; /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+.piczone {
+  display: block;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.pic {
+  max-width: 40%;
+  height: auto;
+  border: solid green;
+  padding: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+}

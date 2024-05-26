@@ -1,0 +1,1110 @@
+@font-face {
+    font-family: Tiger;
+    src: url(fonts/iannnnn-TIGER/OpenType-TT/iannnnn-TIGER-Regular.ttf);
+}
+@font-face {
+    font-family: LP;
+    src: url(fonts/9LP-Bold.otf);
+}
+@font-face {
+    font-family: Wild;
+    src: url(fonts/cc_wild_words_roman.ttf);
+}
+@font-face {
+    font-family: Samrap;
+    src: url(fonts/Samrap/MN\ Samrap.ttf);
+}
+@font-face {
+    font-family: NotoSansLight;
+    src: url(fonts/Noto_Sans_Thai_Looped/NotoSansThaiLooped-Light.ttf);
+}
+@font-face {
+    font-family: NotoSansRegular;
+    src: url(fonts/Noto_Sans_Thai_Looped/NotoSansThaiLooped-Regular.ttf);
+}
+@font-face {
+    font-family: NotoSansSemiBold;
+    src: url(fonts/Noto_Sans_Thai_Looped/NotoSansThaiLooped-SemiBold.ttf);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FFFCF5;
+    background-image: url(images/drawn_img/PageEdgeBG/PageEdge2_Smaller.png);
+    background-size: 100%;
+    background-attachment: fixed;
+    /* Disable Text Selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+/* Disable Image Dragging */
+img {
+    -webkit-user-drag: none;
+}
+
+/*Start of Menu Button*/
+.WholeMenu {
+    display: block;
+    position: fixed;
+}
+.MainMenuBox {
+    height: 70px;
+    width: 160px;
+    display: flex;
+    background-color: #B18C6A;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.35);
+    margin-left: 70px;
+    margin-top: 70px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.MainMenu_Text {
+    font-family: LP;
+    font-size: 30px;
+    color: white;
+    text-shadow:  -1.5px -1.5px 0 #000,
+    0   -2px 0 #000,
+    1px -2px 0 #000,
+    1.5px  0   0 #000,
+    1.5px  1.5px 0 #000,
+    0 1.5px 0 #000,
+   -1.5px  1.5px 0 #000,
+   -1.5px  0   0 #000;
+   letter-spacing: 0.5px;
+   line-height: 68px;
+   margin-left: 10px;
+}
+.MainMenu_BulletsIcon {
+    margin-left: 15px;
+    margin-top: 7px;
+}
+.MainMenuBox:hover {
+    transform: scale(1.1);
+    background-color: #C9A889;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+/*Whole Menu Button Active State*/
+.WholeMenu.active > .MainMenuBox + .First_DropDown {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.PageButton_Mains_Guide.active ~ .Menu_PageList2 {
+    opacity: 1;
+    pointer-events: auto;
+}
+.Menu_PageList1:has(.PageButton_Mains_Guide.active) {
+    box-shadow: none;
+}
+/*First Drop Down Content*/
+.First_DropDown {
+    position: relative;
+    margin-left: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-150px);
+    transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
+}
+.Menu_BulletHole {
+    position: relative;
+    z-index: 3;
+    margin-top: 5px;
+    margin-left: 96px;
+}
+.Menu_PageList1 {
+    background-color: #B18C6A;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 280px;
+    height: 430px;
+    box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.35);
+    margin-top: -32px;
+}
+.Menu_PageList1 a {
+    text-decoration: none;
+}
+.PageButton_Mains, .PageButton_Mains_Guide {
+    display: block;
+    width: 220px;
+    height: 70px;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #FF3939;
+    font-family: LP;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.PageButton_Mains:hover, .PageButton_Mains_Guide:hover {
+    background-color: #FFE27A;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+/*Second Drop Down Content*/
+.Menu_PageList2 {
+    position: relative;
+    z-index: 2;
+    background-color: #B18C6A;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 280px;
+    height: 500px;
+    box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.35);
+    margin-top: -432px;
+    margin-left: -2px;
+    opacity: 0;
+    pointer-events: none;
+}
+.Menu_PageList2 a {
+    text-decoration: none;
+}
+.PageButton_Subs {
+    display: block;
+    width: 220px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #FF3939;
+    font-family: LP;
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.PageButton_Subs:hover {
+    background-color: #FFE27A;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.Subs_BackButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    background-color: #FFA06A;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 15px 90px 30px 90px;
+    padding-top: 4px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.Subs_BackButton:hover {
+    background-color: #FFBA94;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+/*End of Menu Button*/
+
+/*Start of Sound Button*/
+.SoundButton {
+    height: 60px;
+    width: 60px;
+    background-color: #FFA06A;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.SoundButton:hover {
+    transform: scale(1.1) rotate(-15deg);
+    background-color: #FFBA94;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+/*Sound Playing Animation*/
+@keyframes Pulsing {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/*End of Sound Button*/
+
+/* Bats Animation */
+.All_Bats {
+    position: absolute;
+    width: 1290px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    gap: 690px;
+}
+.Moving_Bats1 {
+    width: 300px;
+    animation: Bats_Left 2s ease-in-out infinite;
+}
+.Moving_Bats2 {
+    width: 300px;
+    animation: Bats_Right 2s ease-in-out 300ms infinite;
+}
+@keyframes Bats_Left {
+    50% {transform: translateY(30px) translateX(-20px);}
+    100% {transform: translateY(0) translateX(0);}
+}
+@keyframes Bats_Right {
+    50% {transform: translateY(-30px) translateX(20px);}
+    100% {transform: translateY(0) translateX(0);}
+}
+/* End */
+
+#PageNameThai {
+    font-size: 100px;
+    color: #FF3939;
+    text-shadow:  -1px -1px 0 #890000,
+    0   -1px 0 #890000,
+    1px -1px 0 #890000,
+    1px  0   0 #890000,
+    1px  1px 0 #890000,
+    0    1px 0 #890000,
+   -1px  1px 0 #890000,
+   -1px  0   0 #890000;
+    font-family: Samrap;
+    text-align: center;
+    padding-top: 80px;
+    margin: 0;
+}
+
+#PageNameEng {
+    font-size: 50px;
+    font-family: Wild;
+    text-align: center;
+    padding-top: 0px;
+    margin: 0;
+}
+
+#เส้นประ {
+    display: block;
+    margin: auto;
+    padding-top: 40px;
+    padding-bottom: 0;
+    stroke-dasharray: 15,10;
+}
+
+/*Guide 1 : Topic 5*/
+/*Topic Box 5*/
+.TopicBox5 {
+    display: block;
+    width: 1290px;
+    margin: auto;
+    margin-top: -148px;
+}
+/*Topic 5 Text*/
+.Topic_TextBox {
+    width: 1290px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+.Topic_Text {
+    font-family: NotoSansLight;
+    font-size: 21px;
+    line-height: 45px;
+    margin: 0;
+}
+.Topic_Column {
+    width: 615px;
+    display: block;
+}
+/*Topic 5 Pic Row 1*/
+.Guide1_PicRow1 {
+    display: block;
+    width: 1324px;
+    position: relative;
+    z-index: 1;
+}
+
+.RedScenarioBox {
+    background-color: #FF3939;
+    width: 1290px;
+    height: 130px;
+    box-sizing: border-box;
+    border: 5px solid black;
+    display: block;
+    margin: auto;
+    margin-top: -75px;
+    padding: 0;
+    text-align: center;
+    font-family: LP;
+    font-size: 70px;
+    color: white;
+    line-height: 142px;
+    text-shadow:  -2px -2px 0 #000,
+    0   -2px 0 #000,
+    2px -2px 0 #000,
+    2px  0   0 #000,
+    2px  2px 0 #000,
+    0    2px 0 #000,
+   -2px  2px 0 #000,
+   -2px  0   0 #000;
+}
+
+/*Start of Brown Box*/
+.BrownScenarioBox1 {
+    background-color: #D8B595;
+    width: 1290px;
+    height: 85px;
+    box-sizing: border-box;
+    border: 5px solid black;
+    display: block;
+    margin: auto;
+    margin-top: 30px;
+    text-align: center;
+    font-family: NotoSansRegular;
+    font-size: 21px;
+    color: black;
+    line-height: 75px;
+}
+.BrownScenarioBox2 {
+    background-color: #D8B595;
+    width: 1290px;
+    height: 120px;
+    box-sizing: border-box;
+    border: 5px solid black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    margin-top: 30px;
+    font-family: NotoSansRegular;
+    font-size: 21px;
+    color: black;
+    line-height: 2.2;
+}
+/*End of Brown Box*/
+
+/*Start of Scenario Choice Section*/
+.Choice_WholeArea {
+    width: 1290px;
+    display: block;
+    margin: auto;
+    margin-top: 70px;
+}
+.ChoiceButton {
+    width: 630px;
+    height: 85px;
+    background-color: #FFA06A;
+    border-radius: 15px;
+    border: 2px solid black;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 4;
+    overflow: hidden;
+    transition: 200ms ease-in-out;
+}
+.ChoiceButton_Number {
+    margin-left: 23px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-sizing: border-box;
+    background-color: #FFE27A;
+    text-align: center;
+    font-family: Wild;
+    font-size: 30px;
+    line-height: 55px;
+    transition: 200ms ease-in-out;
+}
+.ChoiceButton_Text {
+    font-family: NotoSansRegular;
+    font-size: 21px;
+    line-height: 45px;
+    margin-left: 30px;
+}
+.ChoiceButton::before {
+    content: '';
+    position: absolute;
+    z-index: 5;
+    width: 80px;
+    height: 150px;
+    background: white;
+    box-shadow: 0 0 80px #fff;
+    filter: blur(8px);
+    opacity: 0.6;
+    transform: rotate(-20deg) translateY(-25px);
+    top: 0;
+    left: -100px;
+    animation: Shine 3s infinite linear;
+}
+@keyframes Shine {
+    0% {left: -100px;}
+    20% {left: 110%;}
+    100% {left: 110%;}
+}
+@keyframes Button_Clicked {
+    50% {transform: translateY(10px);}
+    100% {transform: translateY(0);}
+}
+.ChoicePicture1, .ChoicePicture2 {
+    transition: 400ms ease-in-out;
+}
+.ChoiceButton:hover {
+    background-color: #FFBA94;
+    transition: 200ms ease-in-out;
+}
+.ChoiceButton:hover > .ChoiceButton_Number {
+    transform: rotate(-15deg);
+    transition: 200ms ease-in-out;
+}
+.WholeChoiceButton1.active > .ChoiceButton::before, .WholeChoiceButton2.active > .ChoiceButton::before {
+    opacity: 0;
+}
+.WholeChoiceButton1.active > .ChoiceButton, .WholeChoiceButton2.active > .ChoiceButton {
+    animation: Button_Clicked 300ms ease 1;
+}
+.WholeChoiceButton1.active > .ChoiceButton + .Pop-Up_ResultBox, .WholeChoiceButton2.active > .ChoiceButton + .Pop-Up_ResultBox {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 400ms ease-in-out;
+}
+.WholeChoiceButton1.active > .Pop-Up_ResultBox > .ResultBox, .WholeChoiceButton2.active > .Pop-Up_ResultBox > .ResultBox {
+    transform: translateY(0);
+    transition: 400ms ease-in-out;
+}
+.AllofChoiceButton:has(.WholeChoiceButton1.active) + .WholeChoicePictures > .ChoicePicture1, .AllofChoiceButton:has(.WholeChoiceButton2.active) + .WholeChoicePictures > .ChoicePicture2 {
+    opacity: 0;
+    pointer-events: none;
+    transition: 400ms ease-in-out;
+}
+/*Result Box Section*/
+.Pop-Up_ResultBox {
+    position: relative;
+    z-index: 3;
+    opacity: 0;
+    pointer-events: none;
+    transition: 400ms ease-in-out;
+}
+.ResultBox {
+    position: relative;
+    z-index: 3;
+    width: 500px;
+    height: 700px;
+    background-color: #FF3939;
+    border: 5px solid black;
+    margin: auto;
+    margin-top: 15px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.45);
+    transform: translateY(-100px);
+    transition: 400ms ease-in-out;
+}
+.Result_TitleBox {
+    width: 420px;
+    height: 85px;
+    background-color: white;
+    border: 5px solid black;
+    box-sizing: border-box;
+    margin: auto;
+    text-align: center;
+    font-family: Samrap;
+    font-size: 35px;
+    color: #FF3939;
+    line-height: 78px;
+}
+.Result_TextBox {
+    width: 420px;
+    height: 200px;
+    background-color: #FFE27A;
+    border: 5px solid black;
+    box-sizing: border-box;
+    margin: auto;
+    margin-top: -5px;
+    text-align: center;
+    font-family: NotoSansRegular;
+    font-size: 21px;
+    line-height: 45px;
+}
+/*End of Scenario Choice Section*/
+
+/*Start of Reality Cover Area*/
+#Cover_WholeArea {
+    position: absolute;
+    width: 1290px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    transition: all 0.5s ease-in;
+}
+#Cover_Button {
+    position: absolute;
+    z-index: 5;
+    width: 70px;
+    height: 70px;
+    background-color: #CEE789;
+    border: 2px solid black;
+    border-radius: 50%;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+    text-align: center;
+    font-family: LP;
+    font-size: 50px;
+    line-height: 70px;
+    margin-top: 300px;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+#Cover_Button:hover {
+    transform: scale(1.1);
+    background-color: #DFFB91;
+    transition: 300ms ease-in-out;
+}
+/*End of Reality Cover Area*/
+
+/*Start of Scenario Reality Section*/
+.Reality_WholeArea {
+    width: 1290px;
+    margin: auto;
+    margin-top: 100px;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.5s ease-in;
+}
+.Reality_Zone {
+    display: flex;
+    width: 1290px;
+    align-items: center;
+    margin-top: -80px;
+}
+/*Green Button Section*/
+.Reality_GreenBox {
+    position: relative;
+    width: 520px;
+    height: 120px;
+    background-color: #CEE789;
+    border-radius: 15px;
+    border: 2px solid black;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    place-items: center;
+    overflow: hidden;
+    transition: 300ms ease-in-out;
+}
+.GreenBox_QuestionMark {
+    position: absolute;
+    margin-top: 8px;
+    font-family: LP;
+    font-size: 60px;
+    transition: 300ms ease-in-out;
+}
+.GreenBox_Text {
+    position: absolute;
+    text-align: center;
+    font-family: NotoSansRegular;
+    font-size: 21px;
+    opacity: 0;
+    transition: 300ms ease-in-out;
+}
+.Reality_GreenBox::before {
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 160px;
+    background: white;
+    box-shadow: 0 0 80px #fff;
+    filter: blur(8px);
+    opacity: 0.6;
+    transform: rotate(-20deg) translateY(-20px);
+    top: 0;
+    left: -100px;
+    animation: Shine 3s infinite linear;
+}
+.Reality_GreenBox:hover {
+    background-color: #DFFB91;
+    cursor: pointer;
+    transition: 300ms ease-in-out;
+}
+.Reality_GreenBox:hover > .GreenBox_QuestionMark {
+    transform: rotate(20deg);
+    transition: 300ms ease-in-out;
+}
+/*Whole Reality Section Active State*/
+.Reality_Zone.active > .Reality_GreenBox {
+    border-radius: 0;
+    border: 5px solid black;
+    box-shadow: none;
+    transition: 300ms ease-in-out;
+}
+.Reality_Zone.active > .Reality_GreenBox::before {
+    opacity: 0;
+}
+.Reality_Zone.active > .Reality_GreenBox > .GreenBox_QuestionMark {
+    opacity: 0;
+    transition: 400ms ease-in-out;
+}
+.Reality_Zone.active > .Reality_GreenBox > .GreenBox_Text {
+    opacity: 1;
+    transition: 400ms ease-in-out;
+}
+.Reality_Zone.active > .Reality_GreenBox + .Reality_Pic, .Reality_Zone.active > .Reality_GreenBox + .Reality_Pic_Div {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 400ms ease-in-out;
+}
+.Reality_Zone.active ~ .RealReason_Zone {
+    opacity: 1;
+    transition: 400ms ease-in-out;
+    transition-delay: 3s;
+}
+.Reality_WholeArea:has(.Reality_Zone.active) + .Reality_Info_Connector > .Info_WholeArea {
+    opacity: 1;
+    transition: 400ms ease-in-out;
+    transition-delay: 7s;
+}
+/* Reality Pic Section*/
+.Reality_Pic, .Reality_Pic_Div {
+    width: 740px;
+    margin-left: 30px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 400ms ease-in-out;
+}
+/* Real Reason Section*/
+.RealReason_Zone{
+    display: flex;
+    margin-top: 70px;
+    opacity: 0;
+    transition: 400ms ease-in-out;
+}
+.RealReason_Pic {
+    width: 630px;
+}
+.RealReason_Title {
+    font-family: Samrap;
+    font-size: 35px;
+    line-height: 45px;
+    margin: 0;
+}
+.RealReason_Text {
+    font-family: NotoSansLight;
+    font-size: 21px;
+    line-height: 45px;
+    margin: 0;
+    margin-top: 15px;
+}
+/*End of Scenario Reality Section*/
+
+/*Start of Scenario Info Section*/
+.Info_WholeArea {
+    width: 1290px;
+    display: block;
+    margin: auto;
+    margin-top: 70px;
+    opacity: 0;
+    transition: 400ms ease-in-out;
+}
+.InfoArea_Content {
+    opacity: 0;
+    pointer-events: none;
+    transition: 400ms ease-in-out;
+}
+.Info_GreenTitle {
+    position: relative;
+    width: 200px;
+    height: 85px;
+    background-color: #FFE27A;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: block;
+    margin: auto;
+    place-items: center;
+    overflow: hidden;
+    transition: 400ms ease-in-out;
+}
+.InfoTitle_QuestionMark {
+    height: 70px;
+    margin-top: -5px;
+    padding-top: 5px;
+    font-family: LP;
+    font-size: 50px;
+    line-height: 70px;
+    transition: 400ms ease-in-out;
+}
+.InfoTitle_Text {
+    position: absolute;
+    margin-top: -72px;
+    margin-left: 20px;
+    font-family: Samrap;
+    font-size: 35px;
+    line-height: 75px;
+    opacity: 0;
+    pointer-events: none;
+    transition: 200ms ease-in-out;
+}
+.Info_GreenTitle::before {
+    content: '';
+    position: absolute;
+    width: 50px;
+    height: 150px;
+    background: white;
+    box-shadow: 0 0 80px #fff;
+    filter: blur(8px);
+    opacity: 0.6;
+    transform: rotate(-20deg) translateY(-25px);
+    top: 0;
+    left: -100px;
+    animation: Shine2 3s infinite linear;
+}
+@keyframes Shine2 {
+    0% {left: -100px;}
+    15% {left: 110%;}
+    100% {left: 110%;}
+}
+.Info_GreenTitle:hover {
+    background-color: #FFEEB4;
+    cursor: pointer;
+    transition: 400ms ease-in-out;
+}
+.Info_GreenTitle:hover > .InfoTitle_QuestionMark {
+    transform: rotate(20deg);
+    transition: 300ms ease-in-out;
+}
+/*Info Section Active State*/
+.Info_WholeArea.active > .Info_GreenTitle {
+    width: 1290px;
+    background-color: #CEE789;
+    border-radius: 0;
+    border: 5px solid black;
+    box-shadow: none;
+    transition: 400ms ease-in-out;
+}
+.Info_WholeArea.active > .Info_GreenTitle::before {
+    opacity: 0;
+}
+.Info_WholeArea.active > .Info_GreenTitle > .InfoTitle_QuestionMark {
+    opacity: 0;
+    transition: 300ms ease-in-out;
+}
+.Info_WholeArea.active > .Info_GreenTitle > .InfoTitle_Text {
+    opacity: 1;
+    transition: 300ms ease-in-out;
+    transition-delay: 200ms;
+}
+.Info_WholeArea.active > .Info_GreenTitle + .InfoArea_Content {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 400ms ease-in-out;
+    transition-delay: 800ms;
+}
+/*End of Scenario Info Section*/
+
+/* Start of All Picture Animation */
+/* Guide 1 Real Reason Pic */
+.Interact_Area1 {
+    position: absolute;
+    width: 630px;
+    height: 300px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.Interact_Area1_2 {
+    position: absolute;
+    width: 750px;
+    height: 300px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.Interact_Area2 {
+    position: absolute;
+    width: 370px;
+    height: 300px;
+    overflow: hidden;
+}
+.Interact_ClickZone1_1, .Interact_ClickZone4 {
+    position: absolute;
+    z-index: 2;
+    width: 630px;
+    height: 300px;
+    border: none;
+    opacity: 0;
+    cursor: pointer;
+    animation: Glowing 2500ms ease-in-out infinite;
+}
+.Interact_ClickZone1_2 {
+    position: absolute;
+    z-index: 2;
+    width: 750px;
+    height: 300px;
+    border: none;
+    opacity: 0;
+    cursor: pointer;
+    animation: Glowing 2500ms ease-in-out infinite;
+}
+.Interact_ClickZone2_1 {
+    position: absolute;
+    z-index: 2;
+    width: 370px;
+    height: 300px;
+    border: none;
+    clip-path: polygon(0 0, 94.6% 0%, 100% 100%, 0% 100%);
+    opacity: 0;
+    cursor: pointer;
+    margin-left: 0px;
+    animation: Glowing 2500ms ease-in-out infinite;
+}
+.Interact_ClickZone2_2 {
+    position: absolute;
+    z-index: 2;
+    width: 650px;
+    height: 300px;
+    border: none;
+    clip-path: polygon(0 0, 95.4% 0, 100% 100%, 0% 100%);
+    opacity: 0;
+    cursor: pointer;
+    animation: Glowing 2500ms ease-in-out infinite;
+}
+.Interact_ClickZone3 {
+    position: absolute;
+    z-index: 2;
+    width: 360px;
+    height: 300px;
+    border: none;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 8.4% 100%);
+    opacity: 0;
+    cursor: pointer;
+    margin-left: 380.5px;
+    animation: Glowing 2500ms ease-in-out infinite;
+}
+.Interact_ClickZone5 {
+    position: absolute;
+    z-index: 4;
+    width: 370px;
+    height: 300px;
+    border: none;
+    clip-path: polygon(0 0, 94.6% 0, 100% 100%, 0% 100%);
+    opacity: 0;
+    cursor: pointer;
+    animation: Glowing 2500ms ease-in-out infinite;
+}
+.Interact_Guide1_ManThumbsUp {
+    position: absolute;
+    z-index: 1;
+    width: 104px;
+    margin-left: 527px;
+    margin-top: 100px;
+}
+.Interact_Guide1_Woman {
+    position: absolute;
+    z-index: 1;
+    width: 340px;
+    margin-left: 405px;
+    margin-top: 0px;
+}
+.Interact_Guide2_GivingHand {
+    position: absolute;
+    z-index: 1;
+    width: 94px;
+    margin-top: 149px;
+    margin-left: 110px;
+}
+.Interact_Guide2_ManHand {
+    position: absolute;
+    z-index: 1;
+    width: 108px;
+    margin-left: 490px;
+    margin-top: 55px;
+}
+.Interact_Guide3_GlassHand {
+    position: absolute;
+    z-index: 1;
+    width: 132px;
+    margin-top: 58px;
+    margin-left: 443px;
+}
+.Interact_Guide4_EardHand {
+    position: absolute;
+    z-index: 1;
+    width: 178px;
+    margin-left: 328px;
+    margin-top: 29px;
+}
+.Interact_Guide5_Frame, .Interact_Guide5_Shoulder, .Interact_Guide5_Panom {
+    position: absolute;
+    width: 370px;
+}
+@keyframes Glowing {
+    50% {
+        background-color: #FFE27A;
+        opacity: 0.25;
+    }
+    100% {
+        background-color: #FFE27A;
+        opacity: 0;
+    }
+}
+@keyframes Guide1_Arm_Up-Down {
+    20% {transform: translateY(-13px) translateX(-8px) rotate(5deg);}
+    100% {transform: translateY(0) translateX(0) rotate(0);}
+}
+@keyframes Guide1_Woman_Laugh {
+    50% {transform: translateY(5px) rotate(-2deg) translateX(-5px);}
+    100% {transform: translateY(0) rotate(0) translateX(0);}
+}
+@keyframes Guide2_Hand_Giving {
+    40% {transform: rotate(-17deg) translateY(-3px);}
+    80% {transform: rotate(0) translateY(0);}
+    100% {transform: rotate(0) translateY(0);}
+}
+@keyframes Guide2_Hand_Waving {
+    25% {transform: rotate(-10deg) translateX(-10px) translateY(5px);}
+    50% {transform: rotate(18deg) translateX(18px) translateY(-10px);}
+    75% {transform: rotate(0) translateX(0) translateY(0);}
+}
+@keyframes Guide3_Glass_Chucking {
+    20% {transform: rotate(-15deg) translateX(-7px) translateY(-6px);}
+    25% {transform: rotate(-12deg) translateX(-5px) translateY(-5px);}
+    30% {transform: rotate(-15deg) translateX(-7px) translateY(-6px);}
+    40% {transform: rotate(-15deg) translateX(-7px) translateY(-6px);}
+    65% {transform: rotate(0) translateX(0) translateY(0);}
+}
+@keyframes Guide4_Hand_Waving {
+    15% {transform: rotate(-20deg) translateX(-28px) translateY(-28px);}
+    60% {transform: rotate(-20deg) translateX(-28px) translateY(-28px);}
+    95% {transform: rotate(0) translateX(0) translateY(0);}
+    100% {transform: rotate(0) translateX(0) translateY(0);}
+}
+@keyframes Guide5_Panom_Up-Down {
+    50% {transform: translateY(10px) translateX(-8px);}
+    100% {transform: translateY(0) translateX(0);}
+}
+.Interact_ClickZone1_1:focus + .Interact_Area1 > .Interact_Guide1_ManThumbsUp {
+    animation: Guide1_Arm_Up-Down 800ms ease-in-out infinite forwards;
+}
+.Interact_ClickZone1_2:focus + .Interact_Area1_2 > .Interact_Guide1_Woman {
+    animation: Guide1_Woman_Laugh 330ms ease-in-out infinite;
+}
+.Interact_ClickZone2_1:focus + .Interact_Guide2_GivingHand {
+    animation: Guide2_Hand_Giving 1.1s ease-in-out infinite;
+}
+.Interact_ClickZone2_2:focus + .Interact_Guide2_ManHand {
+    animation: Guide2_Hand_Waving 1.5s ease-in-out infinite;
+}
+.Interact_ClickZone3:focus + .Interact_Guide3_GlassHand {
+    animation: Guide3_Glass_Chucking 3.8s ease-in-out infinite;
+}
+.Interact_ClickZone4:focus + .Interact_Area1 > .Interact_Guide4_EardHand {
+    animation: Guide4_Hand_Waving 2.3s ease-in-out infinite;
+}
+.Interact_ClickZone5:focus + .Interact_Area2 > .Interact_Guide5_Panom {
+    animation: Guide5_Panom_Up-Down 600ms ease-in-out infinite;
+}
+.Interact_ClickZone1_1:focus, .Interact_ClickZone1_2:focus, .Interact_ClickZone2_1:focus, .Interact_ClickZone2_2:focus, .Interact_ClickZone3:focus, .Interact_ClickZone4:focus, .Interact_ClickZone5:focus {
+    animation: none;
+}
+/* End of All Picture Animation */
+
+/*Start of Next Page Button*/
+.LeftBox {
+    height: 95px;
+    width: 27px;
+    background-color: #FF3939;
+    border: 2px solid black;
+    transform: skew(8deg);
+    box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.35);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.RightBox {
+    height: 95px;
+    width: 225px;
+    margin-left: 13px;
+    background-color: #FF3939;
+    border: 2px solid black;
+    transform: skew(8deg);
+    box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.35);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.NextButton {
+    margin: auto;
+    display: block;
+    display: flex;
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.NextButtonText {
+    transform: skew(-8deg);
+    color: white;
+    font-family: LP;
+    font-size: 45px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    padding-left: 5px;
+    text-shadow:  -2px -2px 0 #000,
+    0   -2px 0 #000,
+    2px -2px 0 #000,
+    2px  0   0 #000,
+    2px  2px 0 #000,
+    0    2px 0 #000,
+   -2px  2px 0 #000,
+   -2px  0   0 #000;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.NextButton:hover .LeftBox {
+    background-color: #FF6161;
+    height: 100px;
+    width: 30px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.NextButton:hover .RightBox {
+    background-color: #FF6161;
+    height: 100px;
+    width: 237px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.NextButton:hover .NextButtonText {
+    font-size: 49px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+/*End of Next Page Button*/

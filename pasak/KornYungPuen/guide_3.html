@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="guide1-5_style.css">
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    <title>Korn Yung Puen : Survival Guide</title>
+    <script src="all_script.js" defer></script>
+</head>
+<body>
+    <!--Menu Button-->
+    <div class="WholeMenu" data-menu>
+        <button class="MainMenuBox" data-menu-button>
+            <div class="MainMenu_Text" data-menu-button>Menu</div>
+            <div class="MainMenu_BulletsIcon" data-menu-button>
+                <img src="images/Menu_BulletsIcon_SVG.svg" alt="Bullets" data-menu-button>
+            </div>
+        </button>
+        <div class="First_DropDown" data-secondpage>
+            <div class="Menu_BulletHole">
+                <img src="images/Menu_BulletHole.png" alt="BulletHole">
+            </div>
+            <div class="Menu_PageList1">
+                <div style="display: block; margin: 30px;"><a href="index.html"><button class="PageButton_Mains" style="line-height: 70px;">หลบบ้าน</button></a></div>
+                <div style="display: block; margin: 30px;"><a href="intropage.html"><button class="PageButton_Mains" style="line-height: 77px;">ไซร์เป็นพันนี้</button></a></div>
+                <!--Guide Page Button-->
+                <button class="PageButton_Mains_Guide" style="line-height: 71px; margin: 30px;" data-secondpage-button>เตินอิรอดพรือ</button>
+                <div style="display: block; margin: 30px;"><a href="aboutpage.html"><button class="PageButton_Mains" style="line-height: 74px;">คือไอ่ไหร้นิ</button></a></div>
+                <div class="Menu_PageList2" data-secondpage>
+                    <div style="display: block; margin: 30px 30px 15px 30px;"><a href="guide_1.html"><button class="PageButton_Subs">สถานการณ์ที่ 1</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_2.html"><button class="PageButton_Subs">สถานการณ์ที่ 2</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_3.html"><button class="PageButton_Subs">สถานการณ์ที่ 3</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_4.html"><button class="PageButton_Subs">สถานการณ์ที่ 4</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_5.html"><button class="PageButton_Subs">สถานการณ์ที่ 5</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_6.html"><button class="PageButton_Subs">บทสรุป</button></a></div>
+                    <button class="Subs_BackButton" data-secondpage-button>
+                        <span style="font-size: 18px; margin-right: 3px;" data-secondpage-button>◀</span>
+                        <p style="color: black; font-family: LP; font-size: 22px;" data-secondpage-button>กลับ</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Bats Animation-->
+    <div class="All_Bats">
+        <img class="Moving_Bats1" src="images/drawn_img/PageEdgeBG/Extra_Bats_Left.png" alt="ค้างคาวบิน">
+        <img class="Moving_Bats2" src="images/drawn_img/PageEdgeBG/Extra_Bats_Right.png" alt="ค้างคาวบิน">
+    </div>
+
+    <!--Page Title-->
+    <p id="PageNameThai">เตินอิรอดพรือ</p>
+    <p id="PageNameEng">Survival Guide</p>
+
+    <!--เส้นประ-->
+    <svg id="เส้นประ" width="1290">
+        <line x1="0" y1="20" x2="1290" y2="20" style="stroke: black;stroke-width:3" />
+    </svg>
+
+    <!--Red Scenario Box-->
+    <div class="RedScenarioBox">
+        สถานการณ์ที่ 3
+    </div>
+
+    <!--Brown Scenario Box-->
+    <div class="BrownScenarioBox1">
+        นายเอิดนั่งดื่มเหล้าอยู่ในร้านเหล้า จู่ๆก็มีคนคอนคนหนึ่งเดินเข้ามาในร้านโดยที่มือข้างหนึ่งล้วงหลบอยู่ในเสื้อคลุม และพุ่งตรงไปยังโต๊ะกลุ่มวัยรุ่น
+    </div>
+
+    <!--Scene 3 Pic 1-3-->
+    <img style="width: 1290px; display: block; margin: auto; margin-top: 30px;" src="images/elements_img/GuidePage3/Scene3_Pic1-3.png" alt="ภาพประกอบสถานการณ์ที่ 3">
+
+    <!--Scene 3 Choice Section-->
+    <div class="Choice_WholeArea">
+        <p style="font-family: Samrap; font-size: 35px; line-height: 45px; margin: 0;">จงเลือกวิธีการเอาชีวิตรอดจากสถานการณ์นี้</p>
+        <!--Choice Buttons-->
+        <div style="display: flex; margin-top: 15px; gap: 30px; position: absolute;" class="AllofChoiceButton">
+            <!--Button 1-->
+            <div class="WholeChoiceButton1" data-choice1>
+                <button id="choicebuttonID1" class="ChoiceButton" data-choice-button1>
+                    <div class="ChoiceButton_Number" data-choice-button1>1</div>
+                    <div class="ChoiceButton_Text" data-choice-button1>รีบวิ่งออกจากร้านไปให้เร็วที่สุดเพราะเขากำลังจะยิงกัน!</div>
+                </button>
+                <!--Pop-Up Result Box 1-->
+                <div class="Pop-Up_ResultBox">
+                    <div class="ResultBox">
+                        <img style="width: 420px; display: block; margin: auto; margin-top: 40px;" src="images/elements_img/GuidePage3/Scene3_Result1.png" alt="ภาพประกอบผลลัพธ์ที่ 1">
+                        <div class="Result_TitleBox" style="margin-top: 40px;">ผลลัพธ์ที่เกิดขึ้น</div>
+                        <div class="Result_TextBox" style="padding-top: 26px;">
+                            เขาเปิดฉากยิงกันซะก่อน<br>
+                            เลยโดนลูกหลงเข้ากลางหัวเต็มๆ<br>
+                            ระหว่างกำลังวิ่งออกจากร้าน
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Button 2-->
+            <div class="WholeChoiceButton2" data-choice2>
+                <button id="choicebuttonID2" class="ChoiceButton" data-choice-button2>
+                    <div class="ChoiceButton_Number" data-choice-button2>2</div>
+                    <div class="ChoiceButton_Text" data-choice-button2>วิ่งกระโจนใส่คนคอนที่เอามือล้วงเสื้อคลุมเพื่อระงับเหตุ!</div>
+                </button>
+                <!--Pop-Up Result Box 2-->
+                <div class="Pop-Up_ResultBox">
+                    <div class="ResultBox">
+                        <img style="width: 452px; display: block; margin-top: 10px; margin-left: 40px;" src="images/elements_img/GuidePage3/Scene3_Result2.png" alt="ภาพประกอบผลลัพธ์ที่ 2">
+                        <div class="Result_TitleBox" style="margin-top: 40px;">ผลลัพธ์ที่เกิดขึ้น</div>
+                        <div class="Result_TextBox" style="padding-top: 26px;">
+                            โดนยิงเข้ากลางอกระหว่าง<br>
+                            กำลังแย่งปืนมาจากคนนั้น<br>
+                            ปัดโถ่!
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Choice Pictures-->
+        <div style="display: flex; margin-top: 130px;" class="WholeChoicePictures">
+            <div class="ChoicePicture1" style="display: flex; margin-left: -30px; margin-right: 30px; height: 300px;">
+                <!--Sound Button-->
+                <button class="SoundButton" style="margin-right: -30px; margin-top: 120px; z-index: 2;" data-sound="sounds/Speech11_Pasak.m4a">
+                    <img src="images/Sound_Icon.svg" alt="Sound Icon">
+                </button>
+                <img src="images/elements_img/GuidePage3/Scene3_Choice1.png" alt="ภาพประกอบตัวเลือกที่ 1" style="width: 630px;">
+            </div>
+            <div class="ChoicePicture2">
+                <img src="images/elements_img/GuidePage3/Scene3_Choice2.png" alt="ภาพประกอบตัวเลือกที่ 2" style="width: 630px;">
+            </div>
+        </div>
+    </div>
+    <!--End of Choice Section-->
+
+    <!--Reality Section Cover-->
+    <div id="Cover_WholeArea">
+        <button id="Cover_Button">!</button>
+    </div>
+
+    <!--Scene 3 Reality Section-->
+    <div id="realityareaID" class="Reality_WholeArea" data-reality>
+        <p style="font-family: NotoSansLight; font-size: 21px; margin: 0;">
+            <span style="font-family: NotoSansSemiBold;">หยุดก่อน! เข้าใจผิดกันแล้ว!</span> ที่จริงคนคอนคนนั้นเขาแค่ซ่อนขวดน้ำกระท่อมไว้ในเสื้อคลุมเพื่อแอบเอาเข้ามาดื่มกับกลุ่มเพื่อนในร้านเท่านั้น
+        </p>
+
+        <!--Zone วิธีการเอาชีวิตรอดตามความเป็นจริง-->
+        <p style="font-family: Samrap; font-size: 35px; line-height: 45px; margin-top: 20px;" data-reality>วิธีการเอาชีวิตรอดตามความเป็นจริง</p>
+        <div class="Reality_Zone" data-reality>
+            <!--Reality Green Button-->
+            <button class="Reality_GreenBox" data-reality-button>
+                <div class="GreenBox_QuestionMark" data-reality-button>?</div>
+                <div class="GreenBox_Text" data-reality-button>
+                    นั่งดื่มต่อไปและเพลิดเพลินไปกับบรรยากาศ
+                </div>
+            </button>
+            <!--Reality Picture-->
+            <div class="Reality_Pic_Div" style="display: flex;">
+                <img style="display: block; width: 740px; padding: 0; position: relative; z-index: 1;" src="images/elements_img/GuidePage3/Guide3_Reality_Pic1-2.png" alt="ภาพประกอบวิธีการเอาชีวิตรอดตามความเป็นจริง">
+                <!--Sound Button-->
+                <button class="SoundButton" style="margin-left: 165px; margin-top: 270px; position: absolute; z-index: 3;" data-sound="sounds/Speech12_Min.m4a">
+                    <img src="images/Sound_Icon.svg" alt="Sound Icon">
+                </button>
+                <!--Interaction มือนายเอิดถือแก้ว-->
+                <button class="Interact_ClickZone3"></button>
+                <img class="Interact_Guide3_GlassHand" src="images/elements_img/GuidePage3/Guide3_RealityPic2_GlassHand.png" alt="มือนายเอิด">
+            </div>
+        </div>
+
+        <!--Zone เหตุผลตามความเป็นจริง-->
+        <div class="RealReason_Zone">
+            <div style="display: flex;">
+                <!--Real Reason Picture-->
+                <img class="RealReason_Pic" src="images/elements_img/GuidePage3/Guide3_RealReasonPic.png" alt="ภาพประกอบเหตุผลตามความเป็นจริง">
+            </div>
+            <div style="display: block; width: 630px; margin-left: 30px;">
+                <p class="RealReason_Title">เหตุผลตามความเป็นจริง</p>
+                <p class="RealReason_Text">ที่คุณไม่ต้องกังวลไป เป็นเพราะว่า...</p>
+                <p class="RealReason_Text">
+                    <span style="letter-spacing: 0.255px;">ไม่ใช่คนคอนทุกคนจะพกปืนยิงกันได้ทุกที่ทุกเวลา และคดีร้ายในเมืองคอนก็</span><br>
+                    ไม่ได้เกิดขึ้นถี่เหมือนที่คาดคิดกัน
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Scene 3 Whole Info Section-->
+    <div class="Reality_Info_Connector" data-reality>
+        <div class="Info_WholeArea" data-info>
+            <!--Info Yellow Button-->
+            <button class="Info_GreenTitle" data-info-button>
+                <div class="InfoTitle_QuestionMark" data-info-button>?</div>
+                <div class="InfoTitle_Text" data-info-button>ความรู้ที่ได้จากสถานการณ์นี้</div>
+            </button>
+            <!--Info Content Section-->
+            <div class="InfoArea_Content">
+                <!--Info Text (Part 1)-->
+                <div class="Topic_TextBox">
+                    <p class="Topic_Text">
+                        <span style="font-family: NotoSansSemiBold;">เมืองคอนมีคดีเยอะกว่าทุกที่ในไทยจริงหรือ? และคนคอนมีปืนกันเยอะจริงไหม?</span>
+                    </p>
+                </div>
+                <div class="Topic_TextBox" style="display: flex;">
+                    <div class="Topic_Column">
+                        <p class="Topic_Text">
+                            <span style="letter-spacing: 0.35px;">สำนักงานสถิติแห่งชาติได้รายงานไว้ว่า จังหวัดนครศรีธรรมราชมีสถิติการ</span><br>
+                            <span style="letter-spacing: -0.02px;">รับแจ้งในคดีความผิดเกี่ยวกับชีวิตและร่างกายระหว่างปี พ.ศ. 2560 - 2564</span><br>
+                            <span style="letter-spacing: 0.34px;">อยู่ที่ 1,970 คดี ซึ่งเป็นคดีที่ลงเอยด้วยการสูญเสียชีวิตอยู่ที่ 322 คดี โดย</span><br>
+                            <span style="letter-spacing: 0px;">ส่วนใหญ่เป็นการฆ่ากันแบบซึ่งหน้าที่ไม่ใช่เป็นการจ้างวานฆ่า แต่เมื่อลองนำ</span><br>
+                            <span style="letter-spacing: 0.605px;">จำนวนคดีที่เกิดการสูญเสียชีวิตมาเทียบกับจำนวนประชากรทั้งหมดของ</span><br>
+                            <span style="letter-spacing: 0px;">จังหวัดที่มีถึง 1,549,344 คนในปี พ.ศ. 2564 (ข้อมูลจาก: ที่ทำการปกครอง</span><br>
+                            <span style="letter-spacing: -0.12px;">จังหวัดนครศรีธรรมราช) ก็คิดเป็นแค่สัดส่วนอันน้อยนิดของประชากรเท่านั้น</span>
+                        </p>
+                    </div>
+                    <div class="Topic_Column" style="margin-left: 60px;">
+                        <p class="Topic_Text">
+                            <span style="letter-spacing: 0.405px;">เมื่อมีการออกข่าวก็จะโดนนำเอาไปออกแค่พวกคดีรุนแรงใหญ่ๆ หรือพวก</span><br>
+                            <span style="letter-spacing: -0.11px;">Extreme Case ที่น้อยครั้งจะเกิดขึ้น มากไปกว่านั้นในช่วงหลังมานี้ คดีความ</span><br>
+                            <span style="letter-spacing: 0.27px;">รุนแรงที่ได้เกิดขึ้นส่วนใหญ่ไม่ได้มาจากผู้กระทำที่มีสภาวะปกติ แต่เป็นผู้ที่</span><br>
+                            <span style="letter-spacing: 0.08px;">ถูกกระทบจากการขยายตัวของการใช้ยาเสพติดหรือสิ่งมึนเมา อีกทั้งยังเห็น</span><br>
+                            <span style="letter-spacing: 0.16px;">ได้ว่าการก่อเหตุด้วยอาวุธปืนมีค่าเฉลี่ยทั้งประเทศที่ไม่แตกต่างกัน จึงไม่ทำ</span><br>
+                            ให้เมืองคอนเป็นเมืองที่มีคดีเยอะกว่าที่อื่นในไทยเสมอไป
+                        </p>
+                    </div>
+                </div>
+                <!--Info Picture Row 1-->
+                <img style="width: 1290px; margin-top: 20px;" src="images/elements_img/GuidePage3/Guide3_InfoPic1-2.png" alt="ภาพประกอบส่วนให้ความรู้">
+                <!--Info Text (Part 2)-->
+                <div class="Topic_TextBox" style="display: flex;">
+                    <div class="Topic_Column">
+                        <p class="Topic_Text">
+                            <span style="letter-spacing: 0.59px;">เมื่อพูดถึงอาวุธปืน สามารถพูดได้ว่าเมืองคอนเป็นจังหวัดที่มีปืนกันเยอะ</span><br>
+                            <span style="letter-spacing: 0.38px;">จากการสำรวจเมื่อปี พ.ศ. 2558 โดยกองแผนงานอาชญากรรมสำนักงาน</span><br>
+                            <span style="letter-spacing: 0.52px;">ยุทธศาสตร์ตำรวจ ได้ระบุไว้ว่ามีผู้ขออนุญาตใช้ปืน 108,255 กระบอกใน</span><br>
+                            <span style="letter-spacing: -0.17px;">จังหวัดนครศรีธรรมราช เมื่อนับเป็นอัตราส่วนต่อประชากรก็เท่ากับว่า 14 คน</span><br>
+                            <span style="letter-spacing: 0.44px;">มีปืน 1 กระบอก ซึ่งนับเป็นอันดับต้นๆ ของประเทศ ที่มาของจำนวนปืนที่</span><br>
+                            <span style="letter-spacing: 0.2px;">เยอะเป็นเพราะว่า ในสมัยก่อนนั้นแทบทุกบ้านในเมืองคอนจะมีอาวุธปืนกัน</span><br>
+                            <span style="letter-spacing: 0.16px;">โดยเฉพาะบ้านที่พอมีอันจะกินและมีฐานะ สาเหตุที่ต้องมีเพราะชาวบ้านทำ</span><br>
+                            สวนทำไร่นาจึงต้องมีอาวุธไว้เฝ้าสวนของตนเองจากสัตว์ป่า
+                        </p>
+                    </div>
+                    <div class="Topic_Column" style="margin-left: 60px;">
+                        <p class="Topic_Text">
+                            <span style="letter-spacing: 0.22px;">อีกทั้งเนื่องด้วยในภาคใต้นั้นพื้นที่ค่อนข้างกว้าง และผู้คนนิยมตั้งบ้านเรือน</span><br>
+                            <span style="letter-spacing: 0.66px;">ห่างๆ กัน ทำให้การควบคุมดูแลความปลอดภัยของภาครัฐทำได้ยากโดย</span><br>
+                            <span style="letter-spacing: -0.12px;">เฉพาะในอดีต ส่งผลให้ประชาชนต้องดูแลตัวเอง แต่พอมานานเข้าในปัจจุบัน</span><br>
+                            <span style="letter-spacing: 0.35px;">สัตว์ป่าที่มารบกวนก็มีน้อยลงแต่อาวุธปืนก็ยังคงมีอยู่ ก็เลยเป็นการใช้เพื่อ</span><br>
+                            <span style="letter-spacing: 0.37px;">ป้องกันชีวิตและทรัพย์สินจากผู้อื่น อาวุธปืนที่มีกันเกือบทั้งหมดมีทะเบียน</span><br>
+                            <span style="letter-spacing: -0.15px;">ถูกต้องตามกฎหมาย อาวุธจะหนักจะเบาก็ขึ้นอยู่กับฐานะแต่ละบ้าน ส่วนใหญ่</span><br>
+                            <span style="letter-spacing: 0.27px;">มีมากกว่าหนึ่งกระบอก ทั้งปืนสั้นปืนยาว บ้างก็ซื้อมาใหม่ บ้างก็ตกทอดกัน</span><br>
+                            มาจากรุ่นสู่รุ่น
+                        </p>
+                    </div>
+                </div>
+                <!--Info Picture Row 2-->
+                <img style="width: 1290px; margin-top: 20px;" src="images/elements_img/GuidePage3/Guide3_InfoPic3-5.png" alt="ภาพประกอบส่วนให้ความรู้">
+            </div>
+        </div>
+    </div>
+
+    <!--Next Page Button-->
+    <div style="padding-top: 140px; padding-bottom: 170px;">
+        <a href="guide_4.html" class="NextButton">
+            <div class="LeftBox"></div>
+            <div class="RightBox">
+                <p class="NextButtonText">ไปกันต่อ!</p>
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="guide1-5_style.css">
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    <title>Korn Yung Puen : Survival Guide</title>
+    <script src="all_script.js" defer></script>
+</head>
+<body>
+    <!--Menu Button-->
+    <div class="WholeMenu" data-menu>
+        <button class="MainMenuBox" data-menu-button>
+            <div class="MainMenu_Text" data-menu-button>Menu</div>
+            <div class="MainMenu_BulletsIcon" data-menu-button>
+                <img src="images/Menu_BulletsIcon_SVG.svg" alt="Bullets" data-menu-button>
+            </div>
+        </button>
+        <div class="First_DropDown" data-secondpage>
+            <div class="Menu_BulletHole">
+                <img src="images/Menu_BulletHole.png" alt="BulletHole">
+            </div>
+            <div class="Menu_PageList1">
+                <div style="display: block; margin: 30px;"><a href="index.html"><button class="PageButton_Mains" style="line-height: 70px;">หลบบ้าน</button></a></div>
+                <div style="display: block; margin: 30px;"><a href="intropage.html"><button class="PageButton_Mains" style="line-height: 77px;">ไซร์เป็นพันนี้</button></a></div>
+                <!--Guide Page Button-->
+                <button class="PageButton_Mains_Guide" style="line-height: 71px; margin: 30px;" data-secondpage-button>เตินอิรอดพรือ</button>
+                <div style="display: block; margin: 30px;"><a href="aboutpage.html"><button class="PageButton_Mains" style="line-height: 74px;">คือไอ่ไหร้นิ</button></a></div>
+                <div class="Menu_PageList2" data-secondpage>
+                    <div style="display: block; margin: 30px 30px 15px 30px;"><a href="guide_1.html"><button class="PageButton_Subs">สถานการณ์ที่ 1</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_2.html"><button class="PageButton_Subs">สถานการณ์ที่ 2</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_3.html"><button class="PageButton_Subs">สถานการณ์ที่ 3</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_4.html"><button class="PageButton_Subs">สถานการณ์ที่ 4</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_5.html"><button class="PageButton_Subs">สถานการณ์ที่ 5</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_6.html"><button class="PageButton_Subs">บทสรุป</button></a></div>
+                    <button class="Subs_BackButton" data-secondpage-button>
+                        <span style="font-size: 18px; margin-right: 3px;" data-secondpage-button>◀</span>
+                        <p style="color: black; font-family: LP; font-size: 22px;" data-secondpage-button>กลับ</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Bats Animation-->
+    <div class="All_Bats">
+        <img class="Moving_Bats1" src="images/drawn_img/PageEdgeBG/Extra_Bats_Left.png" alt="ค้างคาวบิน">
+        <img class="Moving_Bats2" src="images/drawn_img/PageEdgeBG/Extra_Bats_Right.png" alt="ค้างคาวบิน">
+    </div>
+
+    <!--Page Title-->
+    <p id="PageNameThai">เตินอิรอดพรือ</p>
+    <p id="PageNameEng">Survival Guide</p>
+
+    <!--เส้นประ-->
+    <svg id="เส้นประ" width="1290">
+        <line x1="0" y1="20" x2="1290" y2="20" style="stroke: black;stroke-width:3" />
+    </svg>
+
+    <!--Red Scenario Box-->
+    <div class="RedScenarioBox">
+        สถานการณ์ที่ 2
+    </div>
+
+    <!--Brown Scenario Box-->
+    <div class="BrownScenarioBox1">
+        นายเอิดกำลังเดินผ่านเขตชุมชนแห่งหนึ่ง แต่ทันใดนั้นก็มีเสียงตะโกนดังขึ้น และหันไปเห็นคนคอนกำลังเดินเข้ามาหา
+    </div>
+
+    <!--Scene 2 Pic 1-3-->
+    <div style="width: 1290px; display: block; margin: auto; margin-top: 30px;">
+        <img style="width: 1290px; display: block;" src="images/elements_img/GuidePage2/Scene2_Pic1-3.png" alt="ภาพประกอบสถานการณ์ที่ 2">
+        <!--Sound Button-->
+        <button class="SoundButton" style="float: left; margin-left: 600px; margin-top: -30px; position: relative; z-index: 3;" data-sound="sounds/Speech06_Aum.m4a">
+            <img src="images/Sound_Icon.svg" alt="Sound Icon">
+        </button>
+    </div>
+
+    <!--Scene 2 Choice Section-->
+    <div class="Choice_WholeArea">
+        <p style="font-family: Samrap; font-size: 35px; line-height: 45px; margin: 0;">จงเลือกวิธีการเอาชีวิตรอดจากสถานการณ์นี้</p>
+        <!--Choice Buttons-->
+        <div style="display: flex; margin-top: 15px; gap: 30px; position: absolute;" class="AllofChoiceButton">
+            <!--Button 1-->
+            <div class="WholeChoiceButton1" data-choice1>
+                <button id="choicebuttonID1" class="ChoiceButton" data-choice-button1>
+                    <div class="ChoiceButton_Number" data-choice-button1>1</div>
+                    <div class="ChoiceButton_Text" data-choice-button1>รีบวิ่งหนีจากคนนั้นให้เร็วที่สุด ไม่ต้องเหลียวหลังกลับมา</div>
+                </button>
+                <!--Pop-Up Result Box 1-->
+                <div class="Pop-Up_ResultBox">
+                    <div class="ResultBox">
+                        <img style="width: 420px; display: block; margin: auto; margin-top: 40px;" src="images/elements_img/GuidePage2/Scene2_Result1.png" alt="ภาพประกอบผลลัพธ์ที่ 1">
+                        <div class="Result_TitleBox" style="margin-top: 40px;">ผลลัพธ์ที่เกิดขึ้น</div>
+                        <div class="Result_TextBox" style="padding-top: 48px;">
+                            รอดตัวไปได้อย่างหวุดหวิด<br>
+                            เกือบโดนคนคอนหาเรื่องซะแล้ว!
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Button 2-->
+            <div class="WholeChoiceButton2" data-choice2>
+                <button id="choicebuttonID2" class="ChoiceButton" data-choice-button2>
+                    <div class="ChoiceButton_Number" data-choice-button2>2</div>
+                    <div class="ChoiceButton_Text" data-choice-button2>ยกมือยื่นออกไปใส่คนนั้นเพื่อห้ามไม่ให้เขาเดินเข้ามา</div>
+                </button>
+                <!--Pop-Up Result Box 2-->
+                <div class="Pop-Up_ResultBox">
+                    <div class="ResultBox">
+                        <img style="width: 420px; display: block; margin: auto; margin-top: 5px;" src="images/elements_img/GuidePage2/Scene2_Result2.png" alt="ภาพประกอบผลลัพธ์ที่ 2">
+                        <!--Sound Button-->
+                        <button class="SoundButton" style="margin: auto; margin-top: -30px; position: relative; z-index: 3;" data-sound="sounds/Speech10_Aum.m4a">
+                            <img src="images/Sound_Icon.svg" alt="Sound Icon">
+                        </button>
+                        <div class="Result_TitleBox" style="margin-top: 10px;">ผลลัพธ์ที่เกิดขึ้น</div>
+                        <div class="Result_TextBox" style="padding-top: 26px;">
+                            คนคอนมีสีหน้าอารมณ์เสีย<br>
+                            และยกนิ้วชี้หน้าด่านายเอิด<br>
+                            “ไอ่ไหร้ข้องเตินนิ ข๊าดหุ้นม๊าย!”
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Choice Pictures-->
+        <div style="display: flex; margin-top: 130px; gap: 30px;" class="WholeChoicePictures">
+            <div class="ChoicePicture1">
+                <img src="images/elements_img/GuidePage2/Scene2_Choice1.png" alt="ภาพประกอบตัวเลือกที่ 1" style="width: 630px;">
+            </div>
+            <div class="ChoicePicture2">
+                <img src="images/elements_img/GuidePage2/Scene2_Choice2.png" alt="ภาพประกอบตัวเลือกที่ 2" style="width: 630px;">
+            </div>
+        </div>
+    </div>
+    <!--End of Choice Section-->
+
+    <!--Reality Section Cover-->
+    <div id="Cover_WholeArea">
+        <button id="Cover_Button">!</button>
+    </div>
+
+    <!--Scene 2 Reality Section-->
+    <div id="realityareaID" class="Reality_WholeArea" data-reality>
+        <p style="font-family: NotoSansLight; font-size: 21px; margin: 0;">
+            <span style="font-family: NotoSansSemiBold;">แต่เดี๋ยวก่อน!</span> คุณไม่ควรทำทั้ง 2 วิธีนี้ เพราะที่จริงแล้วคนคอนคนนั้นแค่ตะโกนเรียกเพื่อจะบอกว่านายเอิดทำของตก เมื่อเป็นแบบนั้นสิ่งที่คุณควรทำก็คือ...
+        </p>
+
+        <!--Zone วิธีการเอาชีวิตรอดตามความเป็นจริง-->
+        <p style="font-family: Samrap; font-size: 35px; line-height: 45px; margin-top: 20px;" data-reality>วิธีการเอาชีวิตรอดตามความเป็นจริง</p>
+        <div class="Reality_Zone" data-reality>
+            <!--Reality Green Button-->
+            <button class="Reality_GreenBox" data-reality-button>
+                <div class="GreenBox_QuestionMark" data-reality-button>?</div>
+                <div class="GreenBox_Text" data-reality-button>
+                    เมื่อเขายื่นของที่คุณทำตกมาให้<br>
+                    ก็ให้รับกลับมาและขอบคุณตามมารยาท
+                </div>
+            </button>
+            <!--Reality Picture-->
+            <div class="Reality_Pic_Div" style="display: flex;">
+                <img style="display: block; width: 740px; padding: 0; position: relative; z-index: 1;" src="images/elements_img/GuidePage2/Guide2_Reality_Pic1-2.png" alt="ภาพประกอบวิธีการเอาชีวิตรอดตามความเป็นจริง">
+                <!--Interaction มือนายเอิดถือแก้ว-->
+                <button class="Interact_ClickZone2_1"></button>
+                <img class="Interact_Guide2_GivingHand" src="images/elements_img/GuidePage2/Guide2_RealityPic1_Hand.png" alt="มือคนคอน">
+            </div>
+        </div>
+
+        <!--Zone เหตุผลตามความเป็นจริง-->
+        <div class="RealReason_Zone">
+            <div style="display: flex; margin-left: -30px;">
+                <!--Sound Button-->
+                <button class="SoundButton" style="margin-right: -30px; margin-top: 120px; z-index: 3;" data-sound="sounds/Speech07_Dad.m4a">
+                <img src="images/Sound_Icon.svg" alt="Sound Icon">
+                </button>
+                <!--Real Reason Picture-->
+                <img class="RealReason_Pic" src="images/elements_img/GuidePage2/Guide2_RealReasonPic.png" alt="ภาพประกอบเหตุผลตามความเป็นจริง">
+            </div>
+            <div style="display: block; width: 630px; margin-left: 30px;">
+                <p class="RealReason_Title">เหตุผลตามความเป็นจริง</p>
+                <p class="RealReason_Text">ที่คุณไม่ต้องหนีเป็นเพราะว่า...</p>
+                <p class="RealReason_Text">
+                    <span style="letter-spacing: 0.085px;">คนคอนติดนิสัยพูดจาห้วน เสียงห้าว และพูดเสียงดังหรือตะโกนบ้างเป็นปกติ</span><br>
+                    <span style="letter-spacing: 0.19px;">เช่นเวลาขานเรียกคนอื่นอย่างในกรณีนี้ คนคอนไม่ได้ตะโกนเพราะจะหาเรื่อง</span><br>
+                    คุณอย่างเดียวเท่านั้น
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Scene 2 Whole Info Section-->
+    <div class="Reality_Info_Connector" data-reality>
+        <div class="Info_WholeArea" data-info>
+            <!--Info Yellow Button-->
+            <button class="Info_GreenTitle" data-info-button>
+                <div class="InfoTitle_QuestionMark" data-info-button>?</div>
+                <div class="InfoTitle_Text" data-info-button>ความรู้ที่ได้จากสถานการณ์นี้</div>
+            </button>
+            <!--Info Content Section-->
+            <div class="InfoArea_Content">
+                <!--Info Text (Part 1)-->
+                <div class="Topic_TextBox">
+                    <p class="Topic_Text">
+                        <span style="font-family: NotoSansSemiBold;">คนคอนหรือคนใต้นั้นมีนิสัยอย่างไร? และทำไมถึงมีภาพจำไม่ดีจากคนนอก?</span>
+                    </p>
+                </div>
+                <div class="Topic_TextBox">
+                    <p class="Topic_Text">
+                        <span style="letter-spacing: 0.405px;">นักวิชาการและปัญญาชนท้องถิ่นชาวใต้หลายคน ได้ระบุถึงบุคลิกลักษณะนิสัยของคนใต้ไว้ว่า มีความรักพวกพ้อง ชอบรวมพักรวมพวก  มีความภาคนิยมสูง</span><br>
+                        <span style="letter-spacing: 0.12px;">หรือความภูมิใจในท้องถิ่นของตนเอง ผูกพันกับถิ่นกำเนิด มีความใจสู้ กล้าเผชิญหน้าอุปสรรค ไม่เกรงกลัว มีใจนักเลง กล้าได้กล้าเสีย มีการพูดจาที่ห้วน หยาบ</span><br>
+                        <span style="letter-spacing: 0.145px;">แต่พูดตรงไปตรงมาและมีความจริงใจ มีความไม่ยอมคน รู้มาก รู้ทันคน จนถูกมองว่าหัวหมอโดยคนต่างถิ่น มีความหยิ่ง รักอิสระ ทระนงในเกียรติและศักดิ์ศรี</span><br>
+                        ของตนเองและบ้านเกิด  เชื่อมั่นในตนเอง ยอมเอาตัวรอดเองดีกว่าขอความช่วยจากผู้อื่น อีกทั้งยังไม่หวังพึ่งรัฐและมีความต่อต้าน
+                    </p>
+                </div>
+                <!--Info Picture Row 1-->
+                <div style="width: 1290px; display: block; margin: auto; margin-top: 20px;">
+                    <div style="display: flex;">
+                        <img style="width: 1290px;" src="images/elements_img/GuidePage2/Guide2_InfoPic1-2.png" alt="ภาพประกอบส่วนให้ความรู้">
+                        <!--Interaction แขนผู้ชายคนขวาในกลุ่มเพื่อน-->
+                        <button class="Interact_ClickZone2_2"></button>
+                        <img class="Interact_Guide2_ManHand" src="images/elements_img/GuidePage2/Guide2_InfoPic1_Hand.png" alt="แขนผู้ชาย">
+                    </div>
+                </div>
+                <!--Info Text (Part 2)-->
+                <div class="Topic_TextBox">
+                    <p class="Topic_Text">
+                        <span style="letter-spacing: 0.115px;">สาเหตุที่คนใต้มีนิสัยของความรักในพวกพ้อง รักในเกียรติของตนเอง มีความไม่ยอมคนหรือแม้กระทั่งรัฐ ก็เพราะว่าในอดีตนั้น ด้วยความที่หัวเมืองทางภาคใต้</span><br>
+                        <span style="letter-spacing: 0.08px;">อยู่ห่างไกลจากศูนย์กลางอำนาจรัฐ ทำให้คนใต้จำเป็นต้องดำเนินชีวิตด้วยตนเองและช่วยดูแลกันเองมาอย่างยาวนาน เมื่อการปกครองของรัฐเริ่มเข้ามาในภาย</span><br>
+                        หลังจึงทำให้คนใต้รู้สึกไม่ไว้ใจรัฐและมีการต่อต้าน จนเกิดเป็นนิสัยไม่ยอมคนและเลือกที่จะตัดสินปัญหาด้วยตนเองเมื่อเกิดความขัดแย้ง
+                    </p>
+                </div>
+                <!--Info Picture Row 2-->
+                <div style="display: flex; margin-top: 20px; margin-right: -30px;">
+                    <img style="width: 1290px;" src="images/elements_img/GuidePage2/Guide2_InfoPic3-4.png" alt="ภาพประกอบส่วนให้ความรู้">
+                    <!--Sound Button-->
+                    <button class="SoundButton" style="margin-left: -30px; margin-top: 120px; z-index: 5;" data-sound="sounds/Speech8-9_Noon-Dad.mp3">
+                        <img src="images/Sound_Icon.svg" alt="Sound Icon">
+                    </button>
+                </div>
+                <!--Info Text (Part 3)-->
+                <div class="Topic_TextBox" style="display: flex;">
+                    <div class="Topic_Column">
+                        <p class="Topic_Text">
+                            <span style="letter-spacing: 0.34px;">สาเหตุที่คนภาคอื่นรู้สึกว่าคนใต้มีนิสัยโผงผาง หยาบกระด้างและไม่ค่อยมี</span><br>
+                            <span style="letter-spacing: -0.045px;">สัมมาคารวะ เพราะคนใต้มีสําเนียงและลีลาการพูดที่ลักษณะห้าวและห้วนสั้น</span><br>
+                            <span style="letter-spacing: 0.045px;">ขาดหางเสียง ซึ่งลักษณะดังกล่าวนี้เป็นวิธีการพูดโดยทั่วไปของคนใต้ โดยที่</span><br>
+                            <span style="letter-spacing: 0.05px;">พวกเขาไม่ได้มีเจตนาที่แสดงอาการแข็งกระด้างกับผู้อื่น เพราะในภาษาใต้มี</span><br>
+                            <span style="letter-spacing: 0.09px;">การตัดพยางค์ของคําหลายคำที่รับอิทธิพลมาจากภาษากลางหรือภาษาอื่นๆ</span><br>
+                            <span style="letter-spacing: 0.24px;">ให้มีลักษณะเป็นคําที่มีพยางค์น้อยลง บางลักษณะมีการรวบพยางค์เพื่อให้</span><br>
+                            <span style="letter-spacing: 0.145px;">สั้นขึ้น เพื่อให้สื่อสารได้เร็วขึ้นในสถานการณ์ต่างๆ จึงทําให้การออกเสียงคํา</span><br>
+                            <span style="letter-spacing: -0.155px;">อาจดูห้วนไปได้ อีกทั้งคนใต้รุ่นเก่านั้นถือว่าถ้อยคำส่วนใหญ่นอกจากคำหยาบ</span><br>
+                            <span style="letter-spacing: -0.01px;">ถือว่าเป็นคำสุภาพ ใช้ได้เกือบทุกกาลเทศะและกับบุคคลแทบทุกชั้น พวกเขา</span><br>
+                            <span style="letter-spacing: 0.02px;">รู้สึกว่าการแต่งเติมถ้อยคำให้อ่อนหวานแสดงถึงความเป็นคนเสแสร้งและไม่</span><br>
+                            <span style="letter-spacing: -0.095px;">บริสุทธิ์ใจ และถ้าเป็นคนฐานะสูงที่มาถือสาเรื่องถ้อยคำของคนอื่น คนใต้ก็จะ</span><br>
+                            <span style="letter-spacing: 0.135px;">มองว่าเป็นคนหยิ่งยโส ถือตัว และคบยาก จึงทำให้ถ้อยคำของคนใต้มักไม่มี</span>
+                        </p>
+                    </div>
+                    <div class="Topic_Column" style="margin-left: 60px;">
+                        <p class="Topic_Text">
+                            <span style="letter-spacing: 0.47px;">การปรุงแต่งเยอะ เพื่อที่จะแสดงความเป็นผู้มีมารยาท ประเด็นนี้จึงทำให้</span><br>
+                            <span style="letter-spacing: 0.434px;">คนภายนอกที่ไม่เข้าใจวัฒนธรรมการพูดของคนใต้เห็นว่าคนภาคใต้พูดจา</span><br>
+                            <span style="letter-spacing: -0.045px;">แข็งกระด้าง ไม่มีสัมมาวาจา และขาดความคารวะ ส่วนการที่คนไทยภาคอื่นๆ</span><br>
+                            <span style="letter-spacing: 0.401px;">ต่างเข้าใจและมีภาพจำกันว่าคนใต้เป็นคนที่มีอารมณ์ร้อน โผงผาง ตรงไป</span><br>
+                            <span style="letter-spacing: 0.13px;">ตรงมา และพูดจากระโชกโฮกฮากนั้น เป็นเพราะคนใต้มีนิสัยพื้นเพแบบนั้น</span><br>
+                            <span style="letter-spacing: 0.157px;">แล้วมีคนที่ได้พบเจอกับคนใต้และได้สัมผัสนิสัยเหล่านั้นจึงนำไปบอกเล่าต่อ</span><br>
+                            <span style="letter-spacing: 0.19px;">อีกเหตุผลเพราะว่าได้มีการนำบุคลิกของคนใต้ไปเผยแพร่ให้กับผู้คนได้รับรู้</span><br>
+                            <span style="letter-spacing: 0.005px;">ผ่านคำสัมภาษณ์ บทความ หรือสารานุกรมที่เขียนโดยนักวิชาการต่างๆ ที่ได้</span><br>
+                            <span style="letter-spacing: 0.36px;">นิยามนิสัยของคนใต้ไว้ว่าเป็นอย่างไร ตัวอย่างเช่น อ. สุธิวงศ์ พงศ์ไพบูลย์</span><br>
+                            <span style="letter-spacing: 0.21px;">ผู้เป็นประธานในการจัดทำสารานุกรมวัฒนธรรมไทยภาคใต้ ที่มีถึง 18 เล่ม</span><br>
+                            <span style="letter-spacing: -0.2px;">และ อ. นิธิ เอียวศรีวงศ์ ศาสตราจารย์ด้านประวัติศาสตร์ชื่อดังของไทย ผู้ที่ได้</span><br>
+                            พูดถึงภาคใต้และสังคมของคนใต้ไว้มากมาย เป็นต้น
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Next Page Button-->
+    <div style="padding-top: 140px; padding-bottom: 170px;">
+        <a href="guide_3.html" class="NextButton">
+            <div class="LeftBox"></div>
+            <div class="RightBox">
+                <p class="NextButtonText">ไปกันต่อ!</p>
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>

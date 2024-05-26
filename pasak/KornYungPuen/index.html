@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index_style.css">
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    <title>Korn Yung Puen</title>
+</head>
+<body>
+    <!--Background Music-->
+    <audio id="Background_Music" src="sounds/Home_BGMusic.mp3" preload="auto" loop></audio>
+
+    <!--Moving Clouds-->
+    <div style="position: absolute; display: flex;">
+        <img class="BG_MovingCloud1" src="images/elements_img/HomePage/HomePage_ExtraCloud1.png" alt="เมฆขยับ1">
+        <img class="BG_MovingCloud2" src="images/elements_img/HomePage/HomePage_ExtraCloud2.png" alt="เมฆขยับ2">
+    </div>
+
+    <!--Home Titles Area-->
+    <div class="Home_WholeArea" data-start>
+        <!--Main Title-->
+        <p id="MainTitle">
+            <img src="images/elements_img/HomePage/Title_KornYungPuen_SVG.svg" alt="คอนยังปืน">
+        </p>
+        <!--Sub Title-->
+        <p id="SubTitle">
+            <img src="images/elements_img/HomePage/Subtitle_SurvivalGuide_SVG.svg" alt="คู่มือเอาชีวิตรอดในเมืองคอน">
+        </p>
+        <!--English Title-->
+        <p id="EngTitle">
+            <span style="color: #FF3939;">KORN-YUNG-PUEN :</span><span style="color: #000000;"> MUEANG KORN SURVIVAL GUIDE</span>
+        </p>
+        <!--Start Button-->
+        <div class="StartButton" data-start-button>เริ่มอ่าน</div>
+    </div>
+
+    <!--Alert Area-->
+    <div class="Alert_WholeArea">
+        <p class="Alert_Title">คำเตือน!</p>
+        <div class="Alert_TextBox">
+            <p class="Alert_Text">
+                เว็บไซต์นี้ มีภาพ เสียง และเนื้อหาบางส่วน ที่เป็นคำหยาบคายและภาษาที่รุนแรง<br>
+                โปรดใช้วิจารณญาณในการรับชม
+            </p>
+        </div>
+        <!--OK Button-->
+        <a href="intropage.html">
+            <button class="OK_Button">OK</button>
+        </a>
+    </div>
+
+    <!--Java Script-->
+    <script>
+        //Background Music
+        document.addEventListener("DOMContentLoaded", function() {
+            var audio = document.getElementById('Background_Music');
+
+            // Function to play audio
+            function playAudio() {
+                audio.play();
+            }
+
+            // Add mouse event listener to the document
+            document.addEventListener('click', playAudio);
+            document.addEventListener('mousemove', playAudio);
+        });
+
+        //Alert Zone Appear
+        document.addEventListener('click', e => {
+            const isStartButton = e.target.matches("[data-start-button]")
+            if (!isStartButton && e.target.closest('[data-start]') != null) return
+
+            let currentStartBox
+            if (isStartButton) {
+                currentStartBox = e.target.closest('[data-start]')
+                currentStartBox.classList.toggle('active')
+            }
+        })
+    </script>
+</body>
+</html>

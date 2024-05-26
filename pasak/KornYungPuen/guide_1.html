@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="guide1-5_style.css">
+    <link rel="icon" type="image/png" href="images/Favicon.png">
+    <title>Korn Yung Puen : Survival Guide</title>
+    <script src="all_script.js" defer></script>
+</head>
+<body>
+    <!--Menu Button-->
+    <div class="WholeMenu" data-menu>
+        <button class="MainMenuBox" data-menu-button>
+            <div class="MainMenu_Text" data-menu-button>Menu</div>
+            <div class="MainMenu_BulletsIcon" data-menu-button>
+                <img src="images/Menu_BulletsIcon_SVG.svg" alt="Bullets" data-menu-button>
+            </div>
+        </button>
+        <div class="First_DropDown" data-secondpage>
+            <div class="Menu_BulletHole">
+                <img src="images/Menu_BulletHole.png" alt="BulletHole">
+            </div>
+            <div class="Menu_PageList1">
+                <div style="display: block; margin: 30px;"><a href="index.html"><button class="PageButton_Mains" style="line-height: 70px;">หลบบ้าน</button></a></div>
+                <div style="display: block; margin: 30px;"><a href="intropage.html"><button class="PageButton_Mains" style="line-height: 77px;">ไซร์เป็นพันนี้</button></a></div>
+                <!--Guide Page Button-->
+                <button class="PageButton_Mains_Guide" style="line-height: 71px; margin: 30px;" data-secondpage-button>เตินอิรอดพรือ</button>
+                <div style="display: block; margin: 30px;"><a href="aboutpage.html"><button class="PageButton_Mains" style="line-height: 74px;">คือไอ่ไหร้นิ</button></a></div>
+                <div class="Menu_PageList2" data-secondpage>
+                    <div style="display: block; margin: 30px 30px 15px 30px;"><a href="guide_1.html"><button class="PageButton_Subs">สถานการณ์ที่ 1</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_2.html"><button class="PageButton_Subs">สถานการณ์ที่ 2</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_3.html"><button class="PageButton_Subs">สถานการณ์ที่ 3</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_4.html"><button class="PageButton_Subs">สถานการณ์ที่ 4</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_5.html"><button class="PageButton_Subs">สถานการณ์ที่ 5</button></a></div>
+                    <div style="display: block; margin: 15px 30px 15px 30px;"><a href="guide_6.html"><button class="PageButton_Subs">บทสรุป</button></a></div>
+                    <button class="Subs_BackButton" data-secondpage-button>
+                        <span style="font-size: 18px; margin-right: 3px;" data-secondpage-button>◀</span>
+                        <p style="color: black; font-family: LP; font-size: 22px;" data-secondpage-button>กลับ</p>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Bats Animation-->
+    <div class="All_Bats">
+        <img class="Moving_Bats1" src="images/drawn_img/PageEdgeBG/Extra_Bats_Left.png" alt="ค้างคาวบิน">
+        <img class="Moving_Bats2" src="images/drawn_img/PageEdgeBG/Extra_Bats_Right.png" alt="ค้างคาวบิน">
+    </div>
+
+    <!--Page Title-->
+    <p id="PageNameThai">เตินอิรอดพรือ</p>
+    <p id="PageNameEng">Survival Guide</p>
+
+    <!--เส้นประ-->
+    <svg id="เส้นประ" width="1290">
+        <line x1="0" y1="20" x2="1290" y2="20" style="stroke: black;stroke-width:3" />
+    </svg>
+
+    <!--Topic Box 5-->
+    <img class="TopicBox5" src="images/elements_img/GuidePage1/TopicBox_5.png" alt="เอิ้ว! ถึ้งแล้วเอ้">
+    <!--Topic 5 Text-->
+    <div class="Topic_TextBox">
+        <p class="Topic_Text">
+            <span style="letter-spacing: -0.05px;">และแล้วคุณกับนายเอิดก็เดินทางมาถึง <span style="font-family: NotoSansSemiBold;">“เมืองคอน”</span> หรือ นครศรีธรรมราช เมืองสุดอันตรายที่เลื่องชื่อด้านความรุนแรง เมืองที่มีแต่คนน่ากลัว  อารมณ์ร้อน และ</span><br>
+            <span style="letter-spacing: -0.13px;">พร้อมจะปล่อยกระสุนออกมาจากปากลำกล้องปืนได้ทุกเมื่อ ได้เวลาแล้วที่เราจะเผชิญหน้ากับคนคอนเพื่อพิสูจน์ความเป็นจริงจากมีม “คนคอนมีปืน” ให้ได้รับรู้กัน!</span>
+        </p>
+    </div>
+    <!--Topic 5 Picture Row 1-->
+    <div style="display: block; width: 1290px; margin: auto; margin-top: 8px;">
+        <img class="Guide1_PicRow1" src="images/elements_img/GuidePage1/Guide1_PicRow1.png" alt="รูปประกอบการเดินทางมาถึงเมืองคอน">
+        <!--Row 1 Sound Button-->
+        <button class="SoundButton" style="float: right; margin-right: -30px; margin-top: -180px; position: relative; z-index: 5;" data-sound="sounds/Speech02_Aum.mp3">
+            <img src="images/Sound_Icon.svg" alt="Sound Icon">
+        </button>
+    </div>
+
+    <!--Red Scenario Box-->
+    <div class="RedScenarioBox" style="margin-top: 70px;">
+        สถานการณ์ที่ 1
+    </div>
+
+    <!--Brown Scenario Box-->
+    <div class="BrownScenarioBox1">
+        นายเอิดกำลังเดินอยู่ในตลาดนัดที่มีคนชุกชุม จู่ๆก็เดินเข้าไปชนไหล่คนคอนคนหนึ่งโดยที่ไม่ได้ตั้งใจ
+    </div>
+
+    <!--Scene 1 Pic 1-3-->
+    <img style="width: 1290px; display: block; margin: auto; margin-top: 30px;" src="images/elements_img/GuidePage1/Scene1_Pic1-3.png" alt="ภาพประกอบสถานการณ์ที่ 1">
+
+    <!--Scene 1 Choice Section-->
+    <div class="Choice_WholeArea">
+        <p style="font-family: Samrap; font-size: 35px; line-height: 45px; margin: 0;">จงเลือกวิธีการเอาชีวิตรอดจากสถานการณ์นี้</p>
+        <!--Choice Buttons-->
+        <div style="display: flex; margin-top: 15px; gap: 30px; position: absolute;" class="AllofChoiceButton">
+            <!--Button 1-->
+            <div class="WholeChoiceButton1" data-choice1>
+                <button id="choicebuttonID1" class="ChoiceButton" data-choice-button1>
+                    <div class="ChoiceButton_Number" data-choice-button1>1</div>
+                    <div class="ChoiceButton_Text" data-choice-button1>รีบหันไปยกมือไหว้ขอโทษอย่างเกรงอกเกรงใจ</div>
+                </button>
+                <!--Pop-Up Result Box 1-->
+                <div class="Pop-Up_ResultBox">
+                    <div class="ResultBox">
+                        <img style="width: 420px; display: block; margin: auto; margin-top: 6px; position: relative; z-index: 1;" src="images/elements_img/GuidePage1/Scene1_Result1.png" alt="ภาพประกอบผลลัพธ์ที่ 1">
+                        <!--Sound Button-->
+                        <button class="SoundButton" style="margin: auto; margin-top: -30px; position: relative; z-index: 3;" data-sound="sounds/Speech05_Min.m4a">
+                            <img src="images/Sound_Icon.svg" alt="Sound Icon">
+                        </button>
+                        <div class="Result_TitleBox" style="margin-top: 10px;">ผลลัพธ์ที่เกิดขึ้น</div>
+                        <div class="Result_TextBox" style="padding-top: 26px;">
+                            โดนคนคอนด่าสวนกลับมา<br>
+                            “โอยเหยดแหม่มเดินม้ายดูไหร้นิมึง!”<br>
+                            แต่ก็รอดตัวไปได้
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Button 2-->
+            <div class="WholeChoiceButton2" data-choice2>
+                <button id="choicebuttonID2" class="ChoiceButton" data-choice-button2>
+                    <div class="ChoiceButton_Number" data-choice-button2>2</div>
+                    <div class="ChoiceButton_Text" data-choice-button2>รีบตั้งการ์ดมือขึ้นมาทันที ป้องกันเผื่อโดนชก</div>
+                </button>
+                <!--Pop-Up Result Box 2-->
+                <div class="Pop-Up_ResultBox">
+                    <div class="ResultBox">
+                        <img style="width: 435px; display: block; margin-top: 40px; margin-left: 25px;" src="images/elements_img/GuidePage1/Scene1_Result2.png" alt="ภาพประกอบผลลัพธ์ที่ 2">
+                        <div class="Result_TitleBox" style="margin-top: 3px;">ผลลัพธ์ที่เกิดขึ้น</div>
+                        <div class="Result_TextBox" style="padding-top: 48px;">
+                            โดนคนคอนสอยหมัดเข้าหน้าทันที<br>
+                            จมูกหักดัง “กร๊อก!”
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Choice Pictures-->
+        <div style="display: flex; margin-top: 130px; gap: 30px;" class="WholeChoicePictures">
+            <div class="ChoicePicture1">
+                <img src="images/elements_img/GuidePage1/Scene1_Choice1.png" alt="ภาพประกอบตัวเลือกที่ 1" style="width: 630px;">
+            </div>
+            <div class="ChoicePicture2">
+                <img src="images/elements_img/GuidePage1/Scene1_Choice2.png" alt="ภาพประกอบตัวเลือกที่ 2" style="width: 630px;">
+            </div>
+        </div>
+    </div>
+    <!--End of Choice Section-->
+
+    <!--Reality Section Cover-->
+    <div id="Cover_WholeArea">
+        <button id="Cover_Button">!</button>
+    </div>
+
+    <!--Scene 1 Reality Section-->
+    <div id="realityareaID" class="Reality_WholeArea" data-reality>
+        <p style="font-family: NotoSansLight; font-size: 21px; margin: 0;">
+            <span style="font-family: NotoSansSemiBold;">ช้าก่อน!</span> จริงๆแล้วนั้น ทั้ง 2 ผลลัพธ์นี้ไม่ใช่ความเป็นจริงที่จะเกิดขึ้น เพราะที่จริงแล้ววิธีการปฏิบัติเมื่อเจอสถานการณ์นี้คือ...
+        </p>
+
+        <!--Zone วิธีการเอาชีวิตรอดตามความเป็นจริง-->
+        <p style="font-family: Samrap; font-size: 35px; line-height: 45px; margin-top: 20px;" data-reality>วิธีการเอาชีวิตรอดตามความเป็นจริง</p>
+        <div class="Reality_Zone" data-reality>
+            <!--Reality Green Button-->
+            <button class="Reality_GreenBox" data-reality-button>
+                <div class="GreenBox_QuestionMark" data-reality-button>?</div>
+                <div class="GreenBox_Text" data-reality-button>
+                    หันกลับไปพยักหัวลงพร้อมยกมือขึ้นข้างหนึ่ง<br>
+                    และกล่าวคำขอโทษด้วยสีหน้าเป็นมิตร
+                </div>
+            </button>
+            <!--Reality Picture-->
+            <img class="Reality_Pic" src="images/elements_img/GuidePage1/Guide1_Reality_Pic1-2.png" alt="ภาพประกอบวิธีการเอาชีวิตรอดตามความเป็นจริง">
+        </div>
+
+        <!--Zone เหตุผลตามความเป็นจริง-->
+        <div class="RealReason_Zone">
+            <div style="display: flex; margin-left: -30px;">
+                <!--Sound Button-->
+                <button class="SoundButton" style="margin-right: -30px; margin-top: 120px; z-index: 3;" data-sound="sounds/Speech03_Dad.m4a">
+                <img src="images/Sound_Icon.svg" alt="Sound Icon">
+                </button>
+                <!--Real Reason Picture-->
+                <img class="RealReason_Pic" src="images/elements_img/GuidePage1/Guide1_RealReasonPic.png" alt="ภาพประกอบเหตุผลตามความเป็นจริง">
+                <!--Interaction ยกนิ้วโป้ง-->
+                <button class="Interact_ClickZone1_1" style="margin-left: 30px;"></button>
+                <div class="Interact_Area1" style="margin-left: 30px;">
+                    <img class="Interact_Guide1_ManThumbsUp" src="images/elements_img/GuidePage1/Guide1_RealReason_Hand.png" alt="แขนผู้ชาย">
+                </div>
+            </div>
+            <div style="display: block; width: 630px; margin-left: 30px;">
+                <p class="RealReason_Title">เหตุผลตามความเป็นจริง</p>
+                <p class="RealReason_Text">ที่คุณทำเพียงแค่นั้นได้ เป็นเพราะว่า...</p>
+                <p class="RealReason_Text">
+                    <span style="letter-spacing: -0.04px;">แท้จริงแล้วคนคอนทุกคนไม่ได้อารมณ์ร้อนและลงไม้ลงมือกันได้ง่ายๆ แต่พวก</span><br>
+                    เขาต่างก็เข้าใจกันได้ว่านี่เป็นเพียงแค่อุบัติเหตุที่คุณไม่ได้ตั้งใจให้เกิดขึ้น
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!--Scene 1 Whole Info Section-->
+    <div class="Reality_Info_Connector" data-reality>
+        <div class="Info_WholeArea" data-info>
+            <!--Info Yellow Button-->
+            <button class="Info_GreenTitle" data-info-button>
+                <div class="InfoTitle_QuestionMark" data-info-button>?</div>
+                <div class="InfoTitle_Text" data-info-button>ความรู้ที่ได้จากสถานการณ์นี้</div>
+            </button>
+            <!--Info Content Section-->
+            <div class="InfoArea_Content">
+                <!--Info Text (Part 1)-->
+                <div class="Topic_TextBox">
+                    <p class="Topic_Text">
+                        <span style="font-family: NotoSansSemiBold;">ทำไมคนคอนถึงถูกมองว่าเป็นคนดุ? และทำไมถึงมีการล้อเลียนในเรื่องนี้บนอินเทอร์เน็ตกัน?</span> เราสามารถอธิบายได้ด้วยเหตุผล 2 ข้อ
+                    </p>
+                </div>
+                <div class="Topic_TextBox" style="display: flex;">
+                    <div class="Topic_Column">
+                        <p class="Topic_Text">
+                            <span style="letter-spacing: -0.27px;">ในข้อแรก จังหวัดนครศรีธรรมราชเป็นจังหวัดที่มีข่าวเกี่ยวกับคดีอาชญากรรม</span><br>
+                            <span style="letter-spacing: -0.01px;">ที่มีอาวุธปืนเกี่ยวข้องออกมามากอยู่ตลอด บวกกับมีคดีโด่งดังในอดีตที่สร้าง</span><br>
+                            <span style="letter-spacing: 0.23px;">ชื่อให้กับจังหวัด เช่น ในปี พ.ศ. 2527 ได้มีคดีฆ่ากันตายถึง 77 ศพในระยะ</span><br>
+                            <span style="letter-spacing: -0.36px;">เวลาเพียง 2 เดือน (อ้างอิงจาก Catdumb) ซึ่งทำให้เมืองคอนได้รับความสนใจ</span><br>
+                            และถูกเกรงกลัวจากผู้คนในขณะนั้น
+                        </p>
+                    </div>
+                    <div class="Topic_Column" style="margin-left: 60px;">
+                        <p class="Topic_Text">
+                            <span style="letter-spacing: 0.42px;">และในช่วงไม่นานมานี้ในปี พ.ศ. 2564 ได้มีสถิติออกมาว่า ในระยะเวลา 8 </span><br>
+                            <span style="letter-spacing: 0.24px;">เดือน พบว่ามีคดีฆ่ากันตายถึง 39 คดี เฉลี่ยแล้วตกเดือนละ 5 ศพ ถือว่าสูง</span><br>
+                            <span style="letter-spacing: 0.15px;">มากที่สุดในประเทศในขณะนั้น (อ้างอิงจาก Bangkok Post) จึงเป็นเหตุทำ</span><br>
+                            <span style="letter-spacing: 0.04px;">ให้เมืองคอนถูกมองด้วยภาพลักษณ์ที่น่ากลัว และได้รับสมญานามไม่ดีต่างๆ</span><br>
+                            จากคนภายนอกมากมาย
+                        </p>
+                    </div>
+                </div>
+                <!--Info Picture Row 1-->
+                <img style="width: 1290px; margin-top: -27px;" src="images/elements_img/GuidePage1/Guide1_InfoPic1-2.png" alt="ภาพประกอบส่วนให้ความรู้">
+                <!--Info Text (Part 2)-->
+                <div class="Topic_TextBox">
+                    <p class="Topic_Text">
+                        <span style="letter-spacing: 0.06px;">และในข้อที่สอง คนไทยมีมุมมองเกี่ยวกับคนใต้มาเนิ่นนานว่าเป็นคนที่มีอารมณ์ร้อน โผงผาง ตรงไปตรงมา และรักในศักดิ์ศรี ซึ่งทำให้ถูกมองว่าพอมีปัญหากับ</span><br>
+                        <span style="letter-spacing: 0.09px;">ใครหน่อยก็ต้องจบที่การต่อสู้ทะเลาะวิวาท ด้วยภาพลักษณ์เช่นนี้ของคนใต้จึงประจวบเหมาะพอดีกับข่าวคดีร้ายต่างๆที่ออกมาจากเมืองคอน เป็นเหตุทำให้เกิด</span><br>
+                        การเล่าลือเกี่ยวกับคนคอนว่าเป็นคนที่อารมณ์ร้อน พูดจารุนแรง ดุร้าย และชอบตัดสินความขัดแย้งด้วยปืน
+                    </p>
+                </div>
+                <!--Info Picture Row 2-->
+                <div style="display: flex; margin-top: 20px; margin-left: -30px;">
+                    <!--Sound Button-->
+                    <button class="SoundButton" style="margin-right: -30px; margin-top: 120px; z-index: 5;" data-sound="sounds/Speech04_Pasak.m4a">
+                        <img src="images/Sound_Icon.svg" alt="Sound Icon">
+                    </button>
+                    <img style="width: 1290px;" src="images/elements_img/GuidePage1/Guide1_InfoPic3-4.png" alt="ภาพประกอบส่วนให้ความรู้">
+                    <!--Interaction มือผู้หญิงถือโทรศัพท์-->
+                    <button class="Interact_ClickZone1_2" style="margin-left: 570px;"></button>
+                    <div class="Interact_Area1_2" style="margin-left: 570px;">
+                        <img class="Interact_Guide1_Woman" src="images/elements_img/GuidePage1/Guide1_InfoPic4_Woman.png" alt="ผู้หญิงหัวเราะ">
+                    </div>
+                </div>
+                <!--Info Text (Part 3)-->
+                <div class="Topic_TextBox">
+                    <p class="Topic_Text">
+                        <span style="letter-spacing: -0.05px;">ต่อมาในปัจจุบันเมื่อโลกออนไลน์ได้เกิดการใช้มีมเพื่อล้อเลียนสิ่งต่างๆขึ้น คนไทยที่ใช้งานโซเชียลมีเดียเองก็ได้มีการแซว ล้อเลียน และเล่นมุกเกี่ยวกับเรื่องต่างๆ</span><br>
+                        ในชีวิตประจำวันรวมถึงเรื่องราวเกี่ยวกับผู้อื่น ซึ่งหนึ่งในนั้นก็คือมุมมองเกี่ยวกับคนคอนนี้เอง จนทำให้เกิดเป็นมีม “คนคอนมีปืน” ขึ้นมา
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--Next Page Button-->
+    <div style="padding-top: 140px; padding-bottom: 170px;">
+        <a href="guide_2.html" class="NextButton">
+            <div class="LeftBox"></div>
+            <div class="RightBox">
+                <p class="NextButtonText">ไปกันต่อ!</p>
+            </div>
+        </a>
+    </div>
+
+</body>
+</html>

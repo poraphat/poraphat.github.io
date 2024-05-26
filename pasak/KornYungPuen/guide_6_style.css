@@ -1,0 +1,526 @@
+@font-face {
+    font-family: Tiger;
+    src: url(fonts/iannnnn-TIGER/OpenType-TT/iannnnn-TIGER-Regular.ttf);
+}
+@font-face {
+    font-family: TigerBold;
+    src: url(fonts/iannnnn-TIGER/OpenType-TT/iannnnn-TIGER-Bold.ttf);
+}
+@font-face {
+    font-family: LP;
+    src: url(fonts/9LP-Bold.otf);
+}
+@font-face {
+    font-family: Wild;
+    src: url(fonts/cc_wild_words_roman.ttf);
+}
+@font-face {
+    font-family: Samrap;
+    src: url(fonts/Samrap/MN\ Samrap.ttf);
+}
+@font-face {
+    font-family: NotoSansLight;
+    src: url(fonts/Noto_Sans_Thai_Looped/NotoSansThaiLooped-Light.ttf);
+}
+@font-face {
+    font-family: NotoSansRegular;
+    src: url(fonts/Noto_Sans_Thai_Looped/NotoSansThaiLooped-Regular.ttf);
+}
+@font-face {
+    font-family: NotoSansSemiBold;
+    src: url(fonts/Noto_Sans_Thai_Looped/NotoSansThaiLooped-SemiBold.ttf);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FFFCF5;
+    background-image: url(images/drawn_img/PageEdgeBG/PageEdge3_Smaller.png);
+    background-size: 100%;
+    background-attachment: fixed;
+    /* Disable Text Selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+/* Disable Image Dragging */
+img {
+    -webkit-user-drag: none;
+}
+
+/*Start of Menu Button*/
+.WholeMenu {
+    display: block;
+    position: fixed;
+}
+.MainMenuBox {
+    height: 70px;
+    width: 160px;
+    display: flex;
+    background-color: #B18C6A;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 3px 6px 6px rgba(0, 0, 0, 0.35);
+    margin-left: 70px;
+    margin-top: 70px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.MainMenu_Text {
+    font-family: LP;
+    font-size: 30px;
+    color: white;
+    text-shadow:  -1.5px -1.5px 0 #000,
+    0   -2px 0 #000,
+    1px -2px 0 #000,
+    1.5px  0   0 #000,
+    1.5px  1.5px 0 #000,
+    0 1.5px 0 #000,
+   -1.5px  1.5px 0 #000,
+   -1.5px  0   0 #000;
+   letter-spacing: 0.5px;
+   line-height: 68px;
+   margin-left: 10px;
+}
+.MainMenu_BulletsIcon {
+    margin-left: 15px;
+    margin-top: 7px;
+}
+.MainMenuBox:hover {
+    transform: scale(1.1);
+    background-color: #C9A889;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+/*Whole Menu Button Active State*/
+.WholeMenu.active > .MainMenuBox + .First_DropDown {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+.PageButton_Mains_Guide.active ~ .Menu_PageList2 {
+    opacity: 1;
+    pointer-events: auto;
+}
+.Menu_PageList1:has(.PageButton_Mains_Guide.active) {
+    box-shadow: none;
+}
+/*First Drop Down Content*/
+.First_DropDown {
+    position: relative;
+    margin-left: 10px;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-150px);
+    transition: opacity 400ms ease-in-out, transform 400ms ease-in-out;
+}
+.Menu_BulletHole {
+    position: relative;
+    z-index: 3;
+    margin-top: 5px;
+    margin-left: 96px;
+}
+.Menu_PageList1 {
+    background-color: #B18C6A;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 280px;
+    height: 430px;
+    box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.35);
+    margin-top: -32px;
+}
+.Menu_PageList1 a {
+    text-decoration: none;
+}
+.PageButton_Mains, .PageButton_Mains_Guide {
+    display: block;
+    width: 220px;
+    height: 70px;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 15px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #FF3939;
+    font-family: LP;
+    font-size: 30px;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.PageButton_Mains:hover, .PageButton_Mains_Guide:hover {
+    background-color: #FFE27A;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+/*Second Drop Down Content*/
+.Menu_PageList2 {
+    position: relative;
+    z-index: 2;
+    background-color: #B18C6A;
+    border: 2px solid black;
+    border-radius: 15px;
+    width: 280px;
+    height: 500px;
+    box-shadow: 0px 4px 6px 3px rgba(0, 0, 0, 0.35);
+    margin-top: -432px;
+    margin-left: -2px;
+    opacity: 0;
+    pointer-events: none;
+}
+.Menu_PageList2 a {
+    text-decoration: none;
+}
+.PageButton_Subs {
+    display: block;
+    width: 220px;
+    height: 50px;
+    background-color: white;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    color: #FF3939;
+    font-family: LP;
+    font-size: 22px;
+    text-align: center;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.PageButton_Subs:hover {
+    background-color: #FFE27A;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.Subs_BackButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 50px;
+    background-color: #FFA06A;
+    border: 2px solid black;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 15px 90px 30px 90px;
+    padding-top: 4px;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.Subs_BackButton:hover {
+    background-color: #FFBA94;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+/*End of Menu Button*/
+
+/*Start of Sound Button*/
+.SoundButton {
+    height: 60px;
+    width: 60px;
+    background-color: #FFA06A;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.30);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.SoundButton:hover {
+    transform: scale(1.1) rotate(-15deg);
+    background-color: #FFBA94;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+/*Sound Playing Animation*/
+@keyframes Pulsing {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/*End of Sound Button*/
+
+/* Birds Animation */
+.All_Birds {
+    position: absolute;
+    width: 1290px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    display: flex;
+    gap: 630px;
+}
+.Moving_Birds1 {
+    width: 330px;
+    animation: Birds_Left 2s ease-in-out infinite;
+}
+.Moving_Birds2 {
+    width: 330px;
+    animation: Birds_Right 2s ease-in-out 300ms infinite;
+}
+@keyframes Birds_Left {
+    50% {transform: translateY(30px) translateX(-20px);}
+    100% {transform: translateY(0) translateX(0);}
+}
+@keyframes Birds_Right {
+    50% {transform: translateY(-30px) translateX(20px);}
+    100% {transform: translateY(0) translateX(0);}
+}
+/* End */
+
+#PageNameThai {
+    font-size: 100px;
+    color: #FF3939;
+    text-shadow:  -1px -1px 0 #890000,
+    0   -1px 0 #890000,
+    1px -1px 0 #890000,
+    1px  0   0 #890000,
+    1px  1px 0 #890000,
+    0    1px 0 #890000,
+   -1px  1px 0 #890000,
+   -1px  0   0 #890000;
+    font-family: Samrap;
+    text-align: center;
+    padding-top: 80px;
+    margin: 0;
+}
+
+#PageNameEng {
+    font-size: 50px;
+    font-family: Wild;
+    text-align: center;
+    padding-top: 0px;
+    margin: 0;
+}
+
+#เส้นประ {
+    display: block;
+    margin: auto;
+    padding-top: 40px;
+    stroke-dasharray: 15,10;
+}
+
+/*Topic Box 6 and 7*/
+.TopicBox {
+    display: block;
+    width: 1290px;
+    margin: auto;
+}
+/*Topic Text*/
+.Topic_TextBox {
+    width: 1290px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+.Topic_Text {
+    font-family: NotoSansLight;
+    font-size: 21px;
+    line-height: 45px;
+}
+.Guide6_PicRow1 {
+    width: 1290px;
+    display: block;
+    margin: auto;
+}
+/*Topic 6_Picture Animation*/
+.Interact_Woman_Arm {
+    position: absolute;
+    z-index: 1;
+    width: 64px;
+    margin-left: 1105px;
+    margin-top: 106px;
+}
+.Interact_ClickZone1 {
+    position: absolute;
+    z-index: 2;
+    width: 431px;
+    height: 300px;
+    border: none;
+    clip-path: polygon(4.7% 0%, 100% 0, 100% 100%, 0% 100%);
+    opacity: 0;
+    cursor: pointer;
+    margin-left: 860px;
+    animation: Glowing 2500ms ease-in-out infinite;
+}
+@keyframes Glowing {
+    50% {
+        background-color: #FFE27A;
+        opacity: 0.25;
+    }
+    100% {
+        background-color: #FFE27A;
+        opacity: 0;
+    }
+}
+@keyframes Arm_Wiggle {
+    20% {
+        transform: rotate(-10deg) translateX(-14px);
+    }
+    100% {
+        transform: rotate(0);
+    }
+}
+.Interact_ClickZone1:focus + .Interact_Woman_Arm {
+    animation-name: Arm_Wiggle;
+    animation-duration: 900ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+.Interact_ClickZone1:focus {
+    animation: none;
+}
+/*End*/
+
+/* Real Photo Box */ 
+.Photo_Row {
+    width: 1290px;
+    display: flex;
+    margin: auto;
+    gap: 30px;
+}
+.Photo_Frame {
+    width: 630px;
+    height: 350px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+/* White Text Box */
+.WhiteBox_Row {
+    width: 1290px;
+    display: flex;
+    margin: auto;
+    gap: 30px;
+}
+.WhiteBox_Small {
+    width: 630px;
+    height: 120px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    background-color: white;
+    text-align: center;
+}
+.WhiteBox_Large {
+    display: block;
+    margin: auto;
+    width: 1290px;
+    height: 120px;
+    border: 5px solid black;
+    box-sizing: border-box;
+    background-color: white;
+    margin-top: 30px;
+}
+.WhiteBox_Text {
+    font-family: NotoSansLight;
+    font-size: 21px;
+    line-height: 45px;
+    margin-top: 10px;
+}
+
+/* ไปเที่ยวคอนกันนิ! Text */
+.SendOff_Text {
+    width: fit-content;
+    display: block;
+    margin: auto;
+    margin-top: 40px;
+    font-family: NotoSansLight;
+    font-size: 25px;
+    line-height: 45px;
+}
+.LetsGo_Text {
+    font-family: TigerBold;
+    font-size: 50px;
+    color: #FFE27A;
+    letter-spacing: 1px;
+    -webkit-text-stroke: 1.5px black;
+}
+
+/* Start of Go Home Button */
+.LeftBox {
+    height: 95px;
+    width: 27px;
+    background-color: #CEE789;
+    border: 2px solid black;
+    transform: skew(8deg);
+    box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.35);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.RightBox {
+    height: 95px;
+    width: 215px;
+    margin-left: 13px;
+    background-color: #CEE789;
+    border: 2px solid black;
+    transform: skew(8deg);
+    box-shadow: 2px 5px 7px rgba(0, 0, 0, 0.35);
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.NextButton {
+    margin: auto;
+    display: block;
+    display: flex;
+    width: fit-content;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+}
+.NextButtonText {
+    transform: skew(-8deg);
+    color: white;
+    font-family: LP;
+    font-size: 45px;
+    line-height: 18px;
+    letter-spacing: 2px;
+    padding-left: 5px;
+    text-shadow:  -2px -2px 0 #000,
+    0   -2px 0 #000,
+    2px -2px 0 #000,
+    2px  0   0 #000,
+    2px  2px 0 #000,
+    0    2px 0 #000,
+   -2px  2px 0 #000,
+   -2px  0   0 #000;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.NextButton:hover .LeftBox {
+    background-color: #DFFB91;
+    height: 100px;
+    width: 30px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.NextButton:hover .RightBox {
+    background-color: #DFFB91;
+    height: 100px;
+    width: 225px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+.NextButton:hover .NextButtonText {
+    font-size: 49px;
+    transition-duration: 0.2s;
+    transition-timing-function: ease-in-out;
+}
+/*End of Go Home Button*/

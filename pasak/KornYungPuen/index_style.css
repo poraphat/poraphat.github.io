@@ -1,0 +1,277 @@
+@font-face {
+    font-family: Tiger;
+    src: url(fonts/iannnnn-TIGER/OpenType-TT/iannnnn-TIGER-Regular.ttf);
+}
+@font-face {
+    font-family: LP;
+    src: url(fonts/9LP-Bold.otf);
+}
+@font-face {
+    font-family: Wild;
+    src: url(fonts/cc_wild_words_roman.ttf);
+}
+@font-face {
+    font-family: Samrap;
+    src: url(fonts/Samrap/MN\ Samrap.ttf);
+}
+@font-face {
+    font-family: NotoSansLight;
+    src: url(fonts/Noto_Sans_Thai_Looped/NotoSansThaiLooped-Light.ttf);
+}
+@font-face {
+    font-family: NotoSansRegular;
+    src: url(fonts/Noto_Sans_Thai_Looped/NotoSansThaiLooped-Regular.ttf);
+}
+@font-face {
+    font-family: NotoSansSemiBold;
+    src: url(fonts/Noto_Sans_Thai_Looped/NotoSansThaiLooped-SemiBold.ttf);
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    background-color: #FFFCF5;
+    background-image: url(images/drawn_img/HomeBG/HomeBG_Fixed.png);
+    background-size: 100%;
+    /* Disable Text Selection */
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+}
+/* Disable Image Dragging */
+img {
+    -webkit-user-drag: none;
+}
+
+/* Moving Clouds */
+.BG_MovingCloud1 {
+    width: 700px;
+    margin-left: 230px;
+    animation: Cloud1 7.5s linear infinite;
+}
+.BG_MovingCloud2 {
+    width: 660px;
+    margin-left: 80px;
+    animation: Cloud2 7.5s linear infinite;
+}
+@keyframes Cloud1 {
+    37.5% {transform: translateX(-150px);}
+    87.5% {transform: translateX(50px);}
+    100% {transform: translateX(0px);}
+}
+@keyframes Cloud2 {
+    37.5% {transform: translateX(150px);}
+    87.5% {transform: translateX(-50px);}
+    100% {transform: translateX(0px);}
+}
+
+/* Main Title Area */
+.Home_WholeArea {
+    position: relative;
+}
+#MainTitle {
+    text-align: center;
+    margin: 0;
+    padding-top: 150px;
+}
+#SubTitle {
+    text-align: center;
+    margin: 0;
+    padding-top: 40px;
+}
+#EngTitle {
+    font-size: 35px;
+    font-family: Tiger;
+    text-align: center;
+    margin: 0;
+    padding-top: 10px;
+}
+
+/* Start Button */
+.StartButton {
+    display: block;
+    width: fit-content;
+    height: 85px;
+    margin: auto;
+    text-align: center;
+    font-size: 52px;
+    letter-spacing: 2px;
+    margin-top: 95px;
+    font-family: LP;
+    overflow: hidden;
+    text-decoration: none;
+    color: #FFE27A;
+    text-shadow:  -2px -2px 0 #000,
+    0   -2px 0 #000,
+    2px -2px 0 #000,
+    2px  0   0 #000,
+    2px  2px 0 #000,
+    0    2px 0 #000,
+    -2px  2px 0 #000,
+    -2px  0   0 #000,
+    0px 5px 6.5px rgba(0, 0, 0, 0.45);
+    animation: Idle 1.5s ease-in-out infinite;
+    transition: 200ms ease-in-out;
+    cursor: pointer;
+}
+.StartButton::before {
+    content: '';
+    position: absolute;
+    width: 40px;
+    height: 150px;
+    background: white;
+    box-shadow: 0 0 80px #fff;
+    filter: blur(8px);
+    opacity: 0.6;
+    transform: rotate(-20deg) translateY(-25px);
+    top: 0;
+    left: -100px;
+    cursor: pointer;
+    animation: Shine 1.5s infinite linear;
+}
+.StartButton:hover {
+    color: #FFEEB4;
+    transition: 200ms ease-in-out;
+    animation: Hover 300ms ease-in-out 1 forwards;
+}
+/* Animations */
+@keyframes Idle {
+    50% {
+        transform: scale(1.15);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes Hover {
+    100% {
+        transform: scale(1.15);
+    }
+}
+@keyframes Shine {
+    0% {left: -100px;}
+    50% {left: 130%;}
+    100% {left: 130%;}
+}
+@keyframes DropDown {
+    0% {transform: translateY(-170px);}
+    70% {transform: translateY(50px);}
+    100% {transform: translateY(0px);}
+}
+/* End of Animations */
+
+/* Home Area Active State */
+.Home_WholeArea.active {
+    opacity: 0;
+    pointer-events: none;
+    transition: 400ms ease-in-out;
+}
+.Home_WholeArea.active + .Alert_WholeArea {
+    opacity: 1;
+    pointer-events: auto;
+    transition: 500ms ease-in-out;
+    transition-delay: 600ms;
+    animation: DropDown 700ms ease-in-out 600ms 1;
+}
+
+/* Start of Alert Area */
+.Alert_WholeArea {
+    display: block;
+    width: fit-content;
+    margin: auto;
+    margin-top: -520px;
+    text-align: center;
+    opacity: 0;
+    pointer-events: none;
+}
+.Alert_Title {
+    font-family: Tiger;
+    font-size: 90px;
+    color: #FF3939;
+    text-shadow:  -1.5px -1.5px 0 #890000,
+    0   -1.5px 0 #890000,
+    1.5px -1.5px 0 #890000,
+    1.5px  0   0 #890000,
+    1.5px  1.5px 0 #890000,
+    0    1.5px 0 #890000,
+   -1.5px  1.5px 0 #890000,
+   -1.5px  0   0 #890000;
+    margin: 0;
+}
+.Alert_TextBox {
+    width: 870px;
+    height: 140px;
+    background-color: #FFE27A;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    margin-top: 20px;
+}
+.Alert_Text {
+    font-family: NotoSansRegular;
+    font-size: 25px;
+    line-height: 50px;
+    margin-top: 18px;
+}
+.OK_Button {
+    position: relative;
+    width: 130px;
+    height: 85px;
+    background-color: #FF3939;
+    border: 2px solid black;
+    border-radius: 15px;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.35);
+    margin-top: 50px;
+    font-family: LP;
+    font-size: 45px;
+    color: white;
+    text-shadow:  -1.5px -1.5px 0 #000,
+    0   -1.5px 0 #000,
+    1.5px -1.5px 0 #000,
+    1.5px  0   0 #000,
+    1.5px  1.5px 0 #000,
+    0    1.5px 0 #000,
+   -1.5px  1.5px 0 #000,
+   -1.5px  0   0 #000;
+    line-height: 85px;
+    overflow: hidden;
+    cursor: pointer;
+    animation: Idle2 1.8s ease-in-out infinite;
+    transition: 250ms ease-in-out;
+}
+.OK_Button:hover {
+    background-color: #FF6161;
+    transition: 250ms ease-in-out;
+    animation: Hover2 300ms ease-in-out 1 forwards;
+}
+.OK_Button::before {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 150px;
+    background: white;
+    box-shadow: 0 0 80px #fff;
+    filter: blur(8px);
+    opacity: 0.6;
+    transform: rotate(-20deg) translateY(-25px);
+    top: 0;
+    left: -60px;
+    cursor: pointer;
+    animation: Shine 1.8s infinite linear;
+}
+/* Animations */
+@keyframes Idle2 {
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@keyframes Hover2 {
+    100% {
+        transform: scale(1.1);
+    }
+}
+/* End of Alert Area */
